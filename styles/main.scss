@@ -1,0 +1,84 @@
+@import './variables/variables';
+
+// Components
+@import './components/Header';
+@import './components/Footer';
+@import './components/HomePage/Promo/Promo.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: $white-color;
+  color: $white-color;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1520px;
+}
+
+.section__pre-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: $black-color;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+.section__text {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+  color: $white-color;
+}
+
+.orange-text {
+  color: $orange-color;
+  font-weight: 700;
+}
