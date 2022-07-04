@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Piston from '../../../assets/svg/danger-piston.svg'
 import Car from '../../../assets/svg/danger-car.svg'
 import Shield from '../../../assets/svg/danger-shield.svg'
