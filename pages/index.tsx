@@ -4,7 +4,7 @@ import Consult from '../src/components/HomePage/Consult/Consult'
 import Services from '../src/components/HomePage/Services/Services'
 import Danger from '../src/components/HomePage/Danger/Danger'
 import Advantages from '../src/components/HomePage/Advantages/Advantages'
-
+import WorkProcess from '../src/components/HomePage/WorkProcess/WorkProcess'
 
 const IndexPage: NextPage = () => {
   return (
@@ -14,6 +14,7 @@ const IndexPage: NextPage = () => {
      <Services/>
      <Danger/>
      <Advantages/>
+     <WorkProcess/>
     </>
   )
 }

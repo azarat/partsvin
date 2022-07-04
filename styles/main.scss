@@ -1,14 +1,5 @@
+
 @import './variables/variables';
-
-// Components
-@import './components/Header';
-@import './components/Footer';
-@import './components/HomePage/Promo/Promo.scss';
-@import './components/HomePage/Consult/Consult.scss';
-@import './components/HomePage/Services/Services.scss';
-@import './components/HomePage/Danger/Danger.scss';
-@import './components/HomePage/Advantages/Advantages.scss';
-
 
 * {
   box-sizing: border-box;
@@ -87,3 +78,16 @@ html {
   color: $orange-color;
   font-weight: 700;
 }
+
+
+// Components
+@import './components/Header';
+@import './components/Footer';
+@import './components/HomePage/Promo/Promo.scss';
+@import './components/HomePage/Consult/Consult.scss';
+@import './components/HomePage/Services/Services.scss';
+@import './components/HomePage/Danger/Danger.scss';
+@import './components/HomePage/Advantages/Advantages.scss';
+@import './components/HomePage/WorkProcess/WorkProcess.scss';
+
+
