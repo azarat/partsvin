@@ -4,6 +4,7 @@
 @import './components/Header';
 @import './components/Footer';
 @import './components/HomePage/Promo/Promo.scss';
+@import './components/HomePage/Consult/Consult.scss';
 
 * {
   box-sizing: border-box;
@@ -52,7 +53,7 @@ html {
   width: 1520px;
 }
 
-.section__pre-title {
+.pre-title {
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
@@ -62,7 +63,7 @@ html {
   text-transform: uppercase;
 }
 
-.section__title {
+.title {
   font-weight: 400;
   font-size: 60px;
   line-height: 70px;
