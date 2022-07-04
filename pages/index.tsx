@@ -5,6 +5,7 @@ import Services from '../src/components/HomePage/Services/Services'
 import Danger from '../src/components/HomePage/Danger/Danger'
 import Advantages from '../src/components/HomePage/Advantages/Advantages'
 import WorkProcess from '../src/components/HomePage/WorkProcess/WorkProcess'
+import Troubleshooting from '../src/components/HomePage/Troubleshooting/Troubleshooting'
 
 const IndexPage: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage: NextPage = () => {
      <Danger/>
      <Advantages/>
      <WorkProcess/>
+     <Troubleshooting/>
     </>
   )
 }
