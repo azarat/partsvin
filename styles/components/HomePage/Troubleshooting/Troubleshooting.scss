@@ -1,20 +1,33 @@
-.consult {
-  padding: 50px 0;
+.troubleshooting {
+  position: relative;
+  padding: 50px 0 220px;
+  &::before {
+    position: absolute;
+    background-image: url('../../../../public/assets/svg/overlap-black.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    content: '';
+  }
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 64px 50px 66px;
-    background-image: url('../../../../public/assets/images/consult-bg.png');
+    padding: 58px 70px;
+    background-image: url('../../../../public/assets/images/troubleshooting-bg.png');
     background-color: $black-color;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
     &--bg {
       position: absolute;
-      bottom: 0;
+      bottom: 35%;
+      right: 0;
       width: 50%;
-      height: 50%;
+      height: 30%;
       background: rgba(255, 169, 81, 0.6);
       filter: blur(150px);
     }
@@ -24,17 +37,17 @@
   }
   &__title {
     text-align: start;
+    margin-bottom: 12px;
   }
   &__description {
-    width: 287px;
-    margin-left: 59%;
+    width: 488px;
   }
   &__image {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 305px;
-    width: 610px;
+    top: 40%;
+    right: -10%;
+    height: 493px;
+    width: 800px;
   }
 
   &__form {
@@ -111,7 +124,7 @@
     }
     &-checkbox {
       display: none;
-      &:checked + .consult__form-label::before {
+      &:checked + .troubleshooting__form-label::before {
         background-color: #E02C22;
 
         // background-image: url('../../public/assets/svg/order-checked.svg');

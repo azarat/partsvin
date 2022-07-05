@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const Consult = () => {
+const Troubleshooting = () => {
   const [errors, setErrors] = useState<string[]>([])
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
@@ -52,41 +52,26 @@ const Consult = () => {
   }
 
   return (
-    <section className='consult'>
-      <div className="container consult__container">
-        <div className="consult__container--bg"></div>
-        <div className="consult__text">
-          <h2 className="pre-title consult__title"><span className='orange-text'>БЕЗКОШТОВНА</span> консультація з експертом</h2>
-          <p className="consult__description section__text">
-            Отримайте відповіді на всі ваші запитання! 
-        </p>
-        <div className="consult__image">
-            <Image
-              className=""
-              src="/assets/images/details-consult.png"
-              layout="fill"
-              objectFit="cover"
-              alt='car'
-              />
-          </div>
-        </div>
-        <form className="consult__form">
-        <div className="consult__form__input-wrapper">
-        <span className="consult__form__thumb">
+    <section className='troubleshooting'>
+      <div className="container troubleshooting__container">
+        <div className="troubleshooting__container--bg"></div>
+        <form className="troubleshooting__form">
+        <div className="troubleshooting__form__input-wrapper">
+        <span className="troubleshooting__form__thumb">
           <input 
-          className={`consult__form-input ${
-          errors.includes('name') ? 'consult__form-input--error' : ''
+          className={`troubleshooting__form-input ${
+          errors.includes('name') ? 'troubleshooting__form-input--error' : ''
           }`}
           placeholder="Ваше ім’я"
           value={name}
           onChange={(e) => setName(e.target.value)} 
           />
         </span>
-        <span className="consult__form__thumb">
+        <span className="troubleshooting__form__thumb">
           <input
           type="text"
-          className={`consult__form-input ${
-            errors.includes('phone') ? 'consult__form-input--error' : ''
+          className={`troubleshooting__form-input ${
+            errors.includes('phone') ? 'troubleshooting__form-input--error' : ''
           }`}
           placeholder="Ваш телефон"
           value={phone}
@@ -94,55 +79,71 @@ const Consult = () => {
           />
         </span>
       </div>
-      <div className="consult__form-checkbox-wrappers">
-        <div className="consult__form-checkbox-wrapper">
+      <div className="troubleshooting__form-checkbox-wrappers">
+        <div className="troubleshooting__form-checkbox-wrapper">
           <input
             id="tel"
             name="tel"
             type="radio"
-            className="consult__form-checkbox"
+            className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('tel')}
             checked={connectType === 'tel'}
           />
-          <label className="consult__form-label" htmlFor="tel">
+          <label className="troubleshooting__form-label" htmlFor="tel">
             Дзвінок
           </label>
         </div>
         
-        <div className="consult__form-checkbox-wrapper">
+        <div className="troubleshooting__form-checkbox-wrapper">
           <input
             type="radio"
             id="telegram"
             name="telegram"
-            className="consult__form-checkbox"
+            className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('telegram')}
             checked={connectType === 'telegram'}
           />
-          <label className="consult__form-label" htmlFor="telegram">
+          <label className="troubleshooting__form-label" htmlFor="telegram">
             Telegram
           </label>
         </div>
-        <div className="consult__form-checkbox-wrapper">
+        <div className="troubleshooting__form-checkbox-wrapper">
           <input
             type="radio"
             id="viber"
             name="viber"
-            className="consult__form-checkbox"
+            className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('viber')}
             checked={connectType === 'viber'}
           />
-          <label className="consult__form-label" htmlFor="viber">
+          <label className="troubleshooting__form-label" htmlFor="viber">
             Viber
           </label>
         </div>
       </div>
-      <button className="consult__form-btn" onClick={handleSend}>
+      <button className="troubleshooting__form-btn" onClick={handleSend}>
         Відправити
       </button>
         </form>
+        <div className="troubleshooting__text">
+          <h2 className="pre-title troubleshooting__title">Дефектування авто по <span className='orange-text'>ФОТО</span></h2>
+          <p className="troubleshooting__description section__text">
+             Нам не обов'язково бачити автомобіль вживу, щоб зробити максимально детальний розрахунок запчастин. Потрібні лише <span className='orange-text'>фото та VIN номер</span> автомобіля
+        </p>
+        <div className="troubleshooting__image">
+            <Image
+              className=""
+              src="/assets/images/troubleshooting-car.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
+        </div>
+        
       </div>
     </section>
   )
 }
 
-export default Consult
+export default Troubleshooting

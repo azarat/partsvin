@@ -1,9 +1,5 @@
-@import './variables/variables';
 
-// Components
-@import './components/Header';
-@import './components/Footer';
-@import './components/HomePage/Promo/Promo.scss';
+@import './variables/variables';
 
 * {
   box-sizing: border-box;
@@ -52,7 +48,7 @@ html {
   width: 1520px;
 }
 
-.section__pre-title {
+.pre-title {
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
@@ -62,7 +58,7 @@ html {
   text-transform: uppercase;
 }
 
-.section__title {
+.title {
   font-weight: 400;
   font-size: 60px;
   line-height: 70px;
@@ -82,3 +78,20 @@ html {
   color: $orange-color;
   font-weight: 700;
 }
+
+
+// Components
+@import './components/Header';
+@import './components/Footer';
+@import './components/HomePage/Promo/Promo.scss';
+@import './components/HomePage/Consult/Consult.scss';
+@import './components/HomePage/Services/Services.scss';
+@import './components/HomePage/Danger/Danger.scss';
+@import './components/HomePage/Advantages/Advantages.scss';
+@import './components/HomePage/WorkProcess/WorkProcess.scss';
+@import './components/HomePage/Troubleshooting/Troubleshooting.scss';
+@import './components/HomePage/Logistic/Logistic.scss';
+
+
+
+

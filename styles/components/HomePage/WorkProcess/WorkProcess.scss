@@ -1,0 +1,150 @@
+.workProcess {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 235px;
+  &__title {
+    color: $black-color;
+    margin-bottom: 50px;
+  }
+  &__cards {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 1330px;
+    padding: 71px 0;
+    background-color: $orange-color;
+    &__item {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 115px;
+      }
+      &:nth-child(1) {
+        padding-left: 199px;
+        &::after {
+          position: absolute;
+          right: -90px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
+        }
+      }
+      &:nth-child(2) {
+        padding-left: 132px;
+        &::after {
+          position: absolute;
+          right: -30%;
+          top: 60px;
+          border: 1px solid $white-color;
+          width: 99px;
+          content: '';
+        }
+        
+      }
+      &:nth-child(3) {
+        padding-left: 199px;
+        &::after {
+          position: absolute;
+          right: -90px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 130px;
+          height: 12px;
+          content: '';
+        }
+      }
+      &:nth-child(4) {
+        &::after {
+          position: absolute;
+          right: -30%;
+          top: 60px;
+          border: 1px solid $white-color;
+          width: 284px;
+          content: '';
+        }
+        padding-left: 132px;
+      }
+      &:nth-child(5) {
+        padding-left: 199px;
+        margin-bottom: 0;
+        &::after {
+          position: absolute;
+          right: -90px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
+        }
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 130px;
+          height: 12px;
+          content: '';
+        }
+      }
+      &:nth-child(6) {
+        padding-left: 132px;
+       
+      }
+      width: 580px;
+      &--num {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      &--title {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      &--text {
+        position: relative;
+      }
+  
+      
+    }
+  }
+  &__image {
+    position: relative;
+    left: 1330px;
+    transform: translate(0, 10%);
+    background-color: $dark-grey-color;
+    width: calc(100% - 1330px);
+    height: 918px;
+  }
+}

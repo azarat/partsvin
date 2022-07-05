@@ -1,0 +1,24 @@
+.danger {
+  background-color: $dark-grey-color;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin-bottom: 58px;
+  }
+  &__cards {
+    display: flex;
+    &__item {
+      width: 490px;
+      padding: 40px 30px 30px;
+      background-color: $white-color;
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+      &-text {
+        margin-top: 20px;
+        color: $black-color;
+      }
+    }
+  }
+}
