@@ -11,6 +11,8 @@ import Storage from '../src/components/HomePage/Storage/Storage'
 import Clients from '../src/components/HomePage/Clients/Clients'
 import Reviews from '../src/components/HomePage/Reviews/Reviews'
 import Faq from '../src/components/HomePage/Faq/Faq'
+import ConsultBottom from '../src/components/HomePage/ConsultBottom/ConsultBottom'
+
 
 const IndexPage: NextPage = () => {
   return (
@@ -27,6 +29,7 @@ const IndexPage: NextPage = () => {
      <Clients/>
      <Reviews/>
      <Faq/>
+     <ConsultBottom/>
     </>
   )
 }
