@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import  ClientsCars  from '../../../constants/clients'
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 
@@ -9,9 +8,6 @@ const Clients = () => {
     <section className='clients'>
       <div className="container clients__container">
         <h2 className='title clients__title'>наші клієнти</h2>
-        
-        
-
 
         <ul className="clients__cards">
           {ClientsCars.map(({ id, model, image_1, image_2 }) => (
@@ -22,13 +18,6 @@ const Clients = () => {
                 <img slot="second" src={image_2} />
                 <div slot="handle" className='handler'></div>
               </ImgComparisonSlider>
-                {/* <Image
-                  className=""
-                  src="/assets/images/details-consult.png"
-                  layout="fill"
-                  objectFit="cover"
-                  alt='car'
-                  /> */}
               </div>
               <p className='clients__cards__item--text'>{model}</p>
             </li>
