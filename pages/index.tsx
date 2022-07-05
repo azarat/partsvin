@@ -8,6 +8,7 @@ import WorkProcess from '../src/components/HomePage/WorkProcess/WorkProcess'
 import Troubleshooting from '../src/components/HomePage/Troubleshooting/Troubleshooting'
 import Logistic from '../src/components/HomePage/Logistic/Logistic'
 import Storage from '../src/components/HomePage/Storage/Storage'
+import Clients from '../src/components/HomePage/Clients/Clients'
 
 
 const IndexPage: NextPage = () => {
@@ -22,6 +23,7 @@ const IndexPage: NextPage = () => {
      <Troubleshooting/>
      <Logistic/>
      <Storage/>
+     <Clients/>
     </>
   )
 }

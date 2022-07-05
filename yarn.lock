@@ -46,6 +46,13 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@img-comparison-slider/react@^7.6.0":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@img-comparison-slider/react/-/react-7.6.0.tgz#1a496008ff9b90e95879f6b59765f77948ded6cb"
+  integrity sha512-Q5RJIbUznMkTfhOdx8IpMhUpxJ1TkthsS3UQolh9MaGWPlpAgnHiP1ZpQRJC4N7VAFrpEBocUfxse7xkZ/kjJQ==
+  dependencies:
+    img-comparison-slider "^7.6.0"
+
 "@next/env@12.2.0":
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.2.0.tgz#17ce2d9f5532b677829840037e06f208b7eed66b"
@@ -1007,6 +1014,11 @@ ignore@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
+
+img-comparison-slider@^7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/img-comparison-slider/-/img-comparison-slider-7.6.0.tgz#eaafc2cb3474b201c15c820293d3038a447c6641"
+  integrity sha512-hkWuVdRaYZBDGZRi3K1cUY6RYX/1Yombd5lOwfuUOgSgXe5hkTHEt4OSBhRa2fsz1UyhRZwDfptj7dW2mz7VKQ==
 
 immutable@^4.0.0:
   version "4.1.0"
