@@ -1,0 +1,78 @@
+.logistic {
+  position: relative;
+  background-color: $dark-grey-color;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 465px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    &__image {
+      position: absolute;
+      width: 420px;
+      height: 280px;
+      top: 74px;
+      right: 550px;
+    }
+    &--left {
+      position: relative;
+      width: 550px;
+      height: 660px; 
+      padding: 30px 73px;
+      background: url('../../../../public/assets/images/logistic-inter.png');
+      background-repeat: no-repeat;
+      background-color: rgba(246, 156, 63, 0.85);
+      &-image {
+        position: absolute;
+        width: 694px;
+        height: 600px;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &--right {
+      position: relative;
+      width: 550px;
+      height: 660px; 
+      padding: 30px 73px;
+      background:  url('../../../../public/assets/images/logistic-ua.png');
+      background-color: rgba(246, 156, 63, 0.85);
+      background-repeat: no-repeat;
+      &-image {
+        position: absolute;
+        bottom: -15%;
+        right: 0;
+        width: 683px;
+        height: 463px;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $black-color;
+    }
+  }
+  &__text--bottom {
+    width: 830px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+}
