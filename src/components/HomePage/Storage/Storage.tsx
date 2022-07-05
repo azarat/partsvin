@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Storage = () => {
 
   return (
-    <section className='storage'>
+    <section className='storage' id='storage'>
       <div className="container storage__container">
         <h2 className='title storage__title'>БЕЗКОШТОВНЕ ЗБЕРІГАННЯ ВАШИХ ЗАПЧАСТин</h2>
       </div>

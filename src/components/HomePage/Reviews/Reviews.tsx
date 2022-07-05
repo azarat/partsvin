@@ -44,7 +44,7 @@ const Reviews = () => {
 
 
   return (
-    <section className='reviews'>
+    <section className='reviews' id='reviews'>
       <div className="container reviews__container">
         <h2 className='title reviews__title'>Відгуки</h2>
         <Slider {...settings}>

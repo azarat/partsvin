@@ -5,7 +5,7 @@ import  WorkProccesCards  from '../../../constants/workProcess'
 const WorkProcess = () => {
 
   return (
-    <section className='workProcess'>
+    <section className='workProcess' id='workProcess'>
       <div className="container workProcess__container">
         <h2 className='title workProcess__title'>Процес роботи</h2>
       </div>

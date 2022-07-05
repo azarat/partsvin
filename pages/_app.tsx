@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Footer from '../src/components/Footer/Footer'
 import Header from '../src/components/Header/Header'
 import '../styles/main.scss'
 
@@ -20,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main >
         <Component {...pageProps} />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

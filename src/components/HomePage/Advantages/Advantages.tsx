@@ -4,7 +4,7 @@ import  OurAdvantages  from '../../../constants/advantages'
 const Advantages = () => {
 
   return (
-    <section className='advantages'>
+    <section className='advantages' id='advantages'>
       <div className="container advantages__container">
         <h2 className='title advantages__title'>Чому ми?</h2>
         <ul className="advantages__cards">

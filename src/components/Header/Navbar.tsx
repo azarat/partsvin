@@ -9,11 +9,11 @@ const Navbar = () => {
       <nav className="header__nav">
         <ul className="header__nav__menu">
             <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Головна</a></Link></li>
-            <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Чому ми</a></Link></li>
-            <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Процес</a></Link></li>
-            <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Логістика</a></Link></li>
-            <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Склад</a></Link></li>
-            <li className="header__nav__menu__item"><Link href="/"><a className='header__nav__menu__link'>Відгуки</a></Link></li>
+            <li className="header__nav__menu__item"><Link href="/#advantages"><a className='header__nav__menu__link'>Чому ми</a></Link></li>
+            <li className="header__nav__menu__item"><Link href="/#workProcess"><a className='header__nav__menu__link'>Процес</a></Link></li>
+            <li className="header__nav__menu__item"><Link href="/#logistic"><a className='header__nav__menu__link'>Логістика</a></Link></li>
+            <li className="header__nav__menu__item"><Link href="/#storage"><a className='header__nav__menu__link'>Склад</a></Link></li>
+            <li className="header__nav__menu__item"><Link href="/#reviews"><a className='header__nav__menu__link'>Відгуки</a></Link></li>
         </ul>
       </nav>
   )

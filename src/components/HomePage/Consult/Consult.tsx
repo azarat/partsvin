@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import Modal from '../../../../styles/components/Modal/Modal'
+
 
 const Consult = () => {
   const [errors, setErrors] = useState<string[]>([])
@@ -7,6 +9,16 @@ const Consult = () => {
   const [phone, setPhone] = useState<string>('')
   const [connectType, setConnectType] = useState<string>('tel')
   const numberRegEpx = /^\+380\(\d{2}\) \d{3}-\d{2}-\d{2}$/
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalUrl, setModalUrl] = useState(null);
+
+  const openModal = () => {
+    setShowModal(prevState => !prevState);
+  };
+  const closeModal = () => {
+    setShowModal(prevState => !prevState);
+  };
 
   const validate = (): string[] => {
     const initErrors: string[] = []
@@ -18,8 +30,9 @@ const Consult = () => {
 
   const handleSend = async (e: any) => {
     e.preventDefault()
-    if (validate().length == 0) {
-    }
+    // if (validate().length == 0) {
+    // }
+    openModal()
 
     //   const data = {
     //     title: 'Форма: Консультація з експертом',
