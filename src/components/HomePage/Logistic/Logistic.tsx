@@ -6,7 +6,7 @@ const Logistic = () => {
     <section className='logistic' id="logistic">
       <div className="container logistic__container">
         <h2 className='title logistic__title'>Надійна логістика</h2>
-        <p className='section__text logistic__text'>Запчастини приходять саме ті, що треба, не губляться і не б'ються</p>
+        <p className='section__text logistic__text'>Запчастини приходять саме ті, що треба, не губляться і не б`ються</p>
         <div className="logistic__cards">
           <div className="logistic__cards--left">
             <h3 className='logistic__cards__title'>Міжнародна логістика</h3>

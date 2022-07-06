@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 
-function Modal({ onClose, children }) {
+function Modal({ onClose, children }: { onClose: any; children: any }) {
   let modalRoot: any;
   if (typeof window !== 'undefined') {
      modalRoot = document.querySelector('#modal-root');
@@ -16,14 +16,14 @@ function Modal({ onClose, children }) {
     };
   }, []);
 
-  const handleKeyDown = e => {
+  const handleKeyDown = (e: any) => {
     if (e.code === 'Escape') {
       onClose();
       console.log('aa');
     }
   };
 
-  const handleBackdropClick = e => {
+  const handleBackdropClick = (e: any) => {
     if (e.target === e.currentTarget) {
       onClose();
     }

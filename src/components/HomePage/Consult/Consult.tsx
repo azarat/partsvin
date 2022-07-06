@@ -173,7 +173,7 @@ const Consult = () => {
                   <div className="consult__modal__svg"><CheckMarkSVG/></div>
                   <h1 className="consult__modal__title">Дякуємо!</h1>
                   <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+                  <p className='consult__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}

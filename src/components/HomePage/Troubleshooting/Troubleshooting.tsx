@@ -145,7 +145,7 @@ const Troubleshooting = () => {
         <div className="troubleshooting__text">
           <h2 className="pre-title troubleshooting__title">Дефектування авто по <span className='orange-text'>ФОТО</span></h2>
           <p className="troubleshooting__description section__text">
-             Нам не обов'язково бачити автомобіль вживу, щоб зробити максимально детальний розрахунок запчастин. Потрібні лише <span className='orange-text'>фото та VIN номер</span> автомобіля
+             Нам не обов`язково бачити автомобіль вживу, щоб зробити максимально детальний розрахунок запчастин. Потрібні лише <span className='orange-text'>фото та VIN номер</span> автомобіля
         </p>
         </div>
         <div className="troubleshooting__image--mob">
@@ -173,7 +173,7 @@ const Troubleshooting = () => {
                   <div className="troubleshooting__modal__svg"><CheckMarkSVG/></div>
                   <h1 className="troubleshooting__modal__title">Дякуємо!</h1>
                   <h2 className='troubleshooting__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='troubleshooting__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+                  <p className='troubleshooting__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}

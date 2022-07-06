@@ -15,13 +15,13 @@ const Reviews = () => {
     slidesToScroll: 1, 
     nextArrow: <SampleArrowNext />, 
     prevArrow: <SampleArrowPrev />, 
-    appendDots: dots => <ul>{dots}</ul>,
-    customPaging: i => (
+    appendDots: (dots: any) => <ul>{dots}</ul>,
+    customPaging: (i: any) => (
       <div className="ft-slick__dots--custom">
         <div className="loading" />
       </div>)
   };
-  function SampleArrowNext(props) {
+  function SampleArrowNext(props: any) {
     const { className, style, onClick } = props;
     return (
       <div
@@ -31,7 +31,7 @@ const Reviews = () => {
       />
     );
   }
-  function SampleArrowPrev(props) {
+  function SampleArrowPrev(props: any) {
     const { className, style, onClick } = props;
     return (
       <div
