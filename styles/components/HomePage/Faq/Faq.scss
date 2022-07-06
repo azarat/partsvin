@@ -1,0 +1,66 @@
+.faq {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__title {
+    color: $black-color;
+    margin-bottom: 66px;
+  }
+
+  &__accordion {
+    &-item {
+      background-color: $dark-grey-color;
+      padding: 50px 60px;
+      cursor: pointer;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+      &-title {
+        position: relative;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+          position: absolute;
+          top: 0s;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          background-image: url('../../../../public/assets/svg/cross.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+          content: '';
+        }
+      }
+      &-text {
+        display: block;
+        width: 954px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      &--open {
+        padding-bottom: 44px;
+        & .faq__accordion-item-title {
+          &::after {
+            transform: rotate(45deg);
+          }
+        }
+        & .faq__accordion-item-text {
+          max-height: 330px;
+          margin-top: 30px;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,15 @@
   top: 0px;
   left: 0px;
   z-index: 999;
+  &.scrolled {
+    background: $black-color;
+    height: 100px;
+    .child_menu {
+      &::before {
+        border-color: $black-color transparent transparent transparent;
+      }
+    }
+  }
   &__container {
     display: flex;
     justify-content: space-between;

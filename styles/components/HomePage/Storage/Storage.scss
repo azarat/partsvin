@@ -1,0 +1,42 @@
+.storage {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: $dark-grey-color;
+  &__title {
+    width: 736px;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    position: relative;
+    width: 1110px;
+    height: 639px;
+  }
+  &__description {
+    background-color: $white-color;
+    padding: 49px 100px;
+    min-width: 810px;
+
+    &__title {
+      color: $black-color;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      width: 433px;
+    }
+    &__text {
+      color: $black-color;
+      width: 510px;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

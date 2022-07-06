@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import Modal from '../Modal/Modal'
+import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
+
 
 const Consult = () => {
   const [errors, setErrors] = useState<string[]>([])
@@ -7,6 +10,15 @@ const Consult = () => {
   const [phone, setPhone] = useState<string>('')
   const [connectType, setConnectType] = useState<string>('tel')
   const numberRegEpx = /^\+380\(\d{2}\) \d{3}-\d{2}-\d{2}$/
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prevState => !prevState);
+  };
+  const closeModal = () => {
+    setShowModal(prevState => !prevState);
+  };
 
   const validate = (): string[] => {
     const initErrors: string[] = []
@@ -18,8 +30,9 @@ const Consult = () => {
 
   const handleSend = async (e: any) => {
     e.preventDefault()
-    if (validate().length == 0) {
-    }
+    // if (validate().length == 0) {
+    // }
+    openModal()
 
     //   const data = {
     //     title: 'Форма: Консультація з експертом',
@@ -141,7 +154,18 @@ const Consult = () => {
       </button>
         </form>
       </div>
+      {showModal && (
+          <Modal onClose={closeModal}>
+              <div className="consult__modal">
+                  <div className="consult__modal__svg"><CheckMarkSVG/></div>
+                  <h1 className="consult__modal__title">Дякуємо!</h1>
+                  <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
+                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+              </div>
+          </Modal>
+        )}
     </section>
+    
   )
 }
 

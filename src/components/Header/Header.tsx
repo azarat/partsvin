@@ -5,9 +5,19 @@ import React, { useEffect, useState } from 'react'
 import {useRouter} from 'next/router';
 
 const Header = () => {
+  const [offset, setOffset] = useState(0);
+  const { pathname } = useRouter();
 
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  
   return (
-    <header className='header'>
+    <header className={`header${(offset > 20 || pathname != '/') ? " scrolled" : ""}`}>
       <div className="container header__container" style={{color: 'red'}}>
         <Logo /> 
         <Navbar />
