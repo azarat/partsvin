@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import Modal from '../Modal/Modal'
+import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
 
 const Troubleshooting = () => {
   const [errors, setErrors] = useState<string[]>([])
@@ -8,10 +10,20 @@ const Troubleshooting = () => {
   const [connectType, setConnectType] = useState<string>('tel')
   const numberRegEpx = /^\+380\(\d{2}\) \d{3}-\d{2}-\d{2}$/
 
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prevState => !prevState);
+  };
+  const closeModal = () => {
+    setShowModal(prevState => !prevState);
+  };
+
+
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }
@@ -19,36 +31,41 @@ const Troubleshooting = () => {
   const handleSend = async (e: any) => {
     e.preventDefault()
     if (validate().length == 0) {
+    
+
+      const data = {
+        title: 'Форма: Консультація з експертом',
+        name,
+        phone,
+        type: connectType,
+        initialLink: localStorage
+        ? localStorage.getItem('url')
+        : false,
+      };
+
+      const JSONdata = JSON.stringify(data)
+
+      const endpoint = '/api/tg_bot'
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSONdata
+      }
+
+      const response = await fetch(endpoint, options)
+
+      const result = await response.json()
+      openModal()
+
+      if (result.status === 200) {
+        setName('')
+        setPhone('')
+        openModal()
+      }
     }
-
-    //   const data = {
-    //     title: 'Форма: Консультація з експертом',
-    //     name,
-    //     phone,
-    //     type: connectType,
-    //   };
-
-    //   const JSONdata = JSON.stringify(data)
-
-    //   const endpoint = '/api/tg_bot'
-
-    //   const options = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSONdata
-    //   }
-
-    //   const response = await fetch(endpoint, options)
-
-    //   const result = await response.json()
-
-    //   if (result.status === 200) {
-    //     setName('')
-    //     setPhone('')
-    //   }
-    // }
   }
 
   return (
@@ -130,7 +147,11 @@ const Troubleshooting = () => {
           <p className="troubleshooting__description section__text">
              Нам не обов'язково бачити автомобіль вживу, щоб зробити максимально детальний розрахунок запчастин. Потрібні лише <span className='orange-text'>фото та VIN номер</span> автомобіля
         </p>
-        <div className="troubleshooting__image">
+        
+        </div>
+       
+      </div>
+      <div className="troubleshooting__image">
             <Image
               className=""
               src="/assets/images/troubleshooting-car.png"
@@ -139,9 +160,16 @@ const Troubleshooting = () => {
               alt='car'
               />
           </div>
-        </div>
-        
-      </div>
+      {showModal && (
+          <Modal onClose={closeModal}>
+              <div className="consult__modal">
+                  <div className="consult__modal__svg"><CheckMarkSVG/></div>
+                  <h1 className="consult__modal__title">Дякуємо!</h1>
+                  <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
+                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+              </div>
+          </Modal>
+        )}
     </section>
   )
 }

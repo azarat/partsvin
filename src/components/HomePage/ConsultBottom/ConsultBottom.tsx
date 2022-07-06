@@ -22,7 +22,7 @@ const ConsultBottom = () => {
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }

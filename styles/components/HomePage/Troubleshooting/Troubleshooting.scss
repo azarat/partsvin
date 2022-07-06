@@ -1,6 +1,7 @@
 .troubleshooting {
   position: relative;
   padding: 50px 0 220px;
+  overflow: hidden;
   &::before {
     position: absolute;
     background-image: url('../../../../public/assets/svg/overlap-black.svg');
@@ -44,8 +45,8 @@
   }
   &__image {
     position: absolute;
-    top: 40%;
-    right: -10%;
+    bottom: 0;
+    right: 0;
     height: 493px;
     width: 800px;
   }
