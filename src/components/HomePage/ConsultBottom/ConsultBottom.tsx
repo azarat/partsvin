@@ -29,38 +29,40 @@ const ConsultBottom = () => {
 
   const handleSend = async (e: any) => {
     e.preventDefault()
-    // if (validate().length == 0) {
-    // }
-    openModal()
+    if (validate().length == 0) {
 
-    //   const data = {
-    //     title: 'Форма: Консультація з експертом',
-    //     name,
-    //     phone,
-    //     type: connectType,
-    //   };
+      const data = {
+        title: 'Форма: Консультація з експертом',
+        name,
+        phone,
+        type: connectType,
+        initialLink: localStorage
+        ? localStorage.getItem('url')
+        : false,
+      };
 
-    //   const JSONdata = JSON.stringify(data)
+      const JSONdata = JSON.stringify(data)
 
-    //   const endpoint = '/api/tg_bot'
+      const endpoint = '/api/tg_bot'
 
-    //   const options = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSONdata
-    //   }
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSONdata
+      }
 
-    //   const response = await fetch(endpoint, options)
+      const response = await fetch(endpoint, options)
 
-    //   const result = await response.json()
-
-    //   if (result.status === 200) {
-    //     setName('')
-    //     setPhone('')
-    //   }
-    // }
+      const result = await response.json()
+      openModal()
+      if (result.status === 200) {
+        setName('')
+        setPhone('')
+        openModal()
+      }
+    }
   }
 
   return (
