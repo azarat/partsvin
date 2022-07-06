@@ -147,11 +147,18 @@ const Troubleshooting = () => {
           <p className="troubleshooting__description section__text">
              Нам не обов'язково бачити автомобіль вживу, щоб зробити максимально детальний розрахунок запчастин. Потрібні лише <span className='orange-text'>фото та VIN номер</span> автомобіля
         </p>
-        
         </div>
-       
+        <div className="troubleshooting__image--mob">
+            <Image
+              className=""
+              src="/assets/images/troubleshooting-car-mob.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
       </div>
-      <div className="troubleshooting__image">
+      <div className="troubleshooting__image--desc">
             <Image
               className=""
               src="/assets/images/troubleshooting-car.png"
@@ -162,11 +169,11 @@ const Troubleshooting = () => {
           </div>
       {showModal && (
           <Modal onClose={closeModal}>
-              <div className="consult__modal">
-                  <div className="consult__modal__svg"><CheckMarkSVG/></div>
-                  <h1 className="consult__modal__title">Дякуємо!</h1>
-                  <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+              <div className="troubleshooting__modal">
+                  <div className="troubleshooting__modal__svg"><CheckMarkSVG/></div>
+                  <h1 className="troubleshooting__modal__title">Дякуємо!</h1>
+                  <h2 className='troubleshooting__modal__pre-title'>дані успішно відправлені</h2>
+                  <p className='troubleshooting__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}
