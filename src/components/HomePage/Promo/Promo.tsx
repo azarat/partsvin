@@ -10,10 +10,10 @@ const Promo = () => {
         <div className="promo__bg"></div>
         <h1 className="promo__title">Все, що потрібно для вашого автомобіля</h1>
         <div className="promo__description">
-          <p className="promo__description__item  section__text"> <span className='orange-text'>Витратні матеріали</span> обслуговування авто. Від гвинтика до олії <LeftLine className="promo__description__item--left"/></p>
+          <p className="promo__description__item  section__text"> <span className='orange-text'>Витратники</span> обслуговування авто. Від гвинтика до олії <LeftLine className="promo__description__item--left"/></p>
           <p className="promo__description__item section__text"> 
           <RightLine className="promo__description__item--right"/>
-          <span className='orange-text'>Кузовні запчастини</span> для авто з США, Європи, КореЇ та інших країн</p>
+          <span className='orange-text'>Кузовні запчастини</span> для ремонту авто з будь-якими пошкодженнями</p>
         </div>
         <div className="promo__buttons">
           <button className="promo__buttons__item--left section__text">Дізнатися ціни</button>

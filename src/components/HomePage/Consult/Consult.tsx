@@ -76,15 +76,7 @@ const Consult = () => {
           <p className="consult__description section__text">
             Отримайте відповіді на всі ваші запитання! 
         </p>
-        <div className="consult__image">
-            <Image
-              className=""
-              src="/assets/images/details-consult.png"
-              layout="fill"
-              objectFit="cover"
-              alt='car'
-              />
-          </div>
+       
         </div>
         <form className="consult__form">
         <div className="consult__form__input-wrapper">
@@ -153,9 +145,27 @@ const Consult = () => {
         </div>
       </div>
       <button className="consult__form-btn" onClick={handleSend}>
-        Відправити
+        Надіслати
       </button>
         </form>
+        <div className="consult__image--desc">
+            <Image
+              className=""
+              src="/assets/images/details-consult.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
+          <div className="consult__image--mob">
+            <Image
+              className=""
+              src="/assets/images/details-mob.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
       </div>
       {showModal && (
           <Modal onClose={closeModal}>
