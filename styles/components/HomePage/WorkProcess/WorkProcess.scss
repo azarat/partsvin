@@ -2,6 +2,20 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 235px;
+
+  &::before {
+    position: absolute;
+    background-image: url('../../../../public/assets/svg/overlap-black.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    content: '';
+  }
+
   &__title {
     color: $black-color;
     margin-bottom: 50px;
@@ -146,5 +160,127 @@
     background-color: $dark-grey-color;
     width: calc(100% - 1330px);
     height: 918px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .workProcess {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 0;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__cards {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      padding: 30px 10px 77px;
+      background-color: $orange-color;
+      &__item {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 60px;
+        }
+        
+        &:nth-child(1) {
+          padding-left: 0;
+          &::after {
+            right: auto;
+            top: auto;
+            bottom: -50px;
+            width: 5px;
+            height: 39px;
+            background-image: url('../../../../public/assets/svg/arrow-down.svg');
+            content: '';
+          }
+        }
+        &:nth-child(2) {
+          padding-left: 0;
+          &::after {
+            border: 0;
+            right: auto;
+            top: auto;
+            bottom: -50px;
+            width: 5px;
+            height: 39px;
+            background-image: url('../../../../public/assets/svg/arrow-down.svg');
+            content: '';
+          }
+          
+        }
+        &:nth-child(3) {
+          padding-left: 0;
+          &::after {
+            border: 0;
+            right: auto;
+            top: auto;
+            bottom: -50px;
+            width: 5px;
+            height: 39px;
+            background-image: url('../../../../public/assets/svg/arrow-down.svg');
+            content: '';
+          }
+          &::before {
+            display: none;
+          }
+        }
+        &:nth-child(4) {
+          &::after {
+            border: 0;
+            right: auto;
+            top: auto;
+            bottom: -50px;
+            width: 5px;
+            height: 39px;
+            background-image: url('../../../../public/assets/svg/arrow-down.svg');
+            content: '';
+          }
+          padding-left: 0;
+        }
+        &:nth-child(5) {
+          padding-left: 0;
+          margin-bottom: 60px;
+          &::after {
+            border: 0;
+            right: auto;
+            top: auto;
+            bottom: -50px;
+            width: 5px;
+            height: 39px;
+            background-image: url('../../../../public/assets/svg/arrow-down.svg');
+            content: '';
+          }
+  
+          &::before {
+            display: none;
+          }
+        }
+        &:nth-child(6) {
+          padding-left: 0;
+         
+        }
+        width: 100%;
+        &--num {
+          font-size: 20px;
+          line-height: 20px;
+          margin-bottom: 5px;
+        }
+        &--title {
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+        &--text {
+          position: relative;
+        }
+    
+        
+      }
+    }
+    &__image {
+      display: none;
+    }
   }
 }
