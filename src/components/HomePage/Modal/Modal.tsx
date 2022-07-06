@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
 
-const modalRoot: any = document.querySelector('#modal-root');
 
 function Modal({ onClose, children }) {
+  let modalRoot: any;
+  if (typeof window !== 'undefined') {
+     modalRoot = document.querySelector('#modal-root');
+  }
+  
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
 
@@ -33,7 +36,4 @@ function Modal({ onClose, children }) {
     modalRoot,
   );
 }
-Modal.propTypes = {
-  children: PropTypes.object.isRequired,
-};
 export default Modal;

@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
       <Footer />
+      <div id="modal-root"></div>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import Modal from '../../../../styles/components/Modal/Modal'
+import Modal from '../Modal/Modal'
+import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
 
 
 const Consult = () => {
@@ -11,7 +12,6 @@ const Consult = () => {
   const numberRegEpx = /^\+380\(\d{2}\) \d{3}-\d{2}-\d{2}$/
 
   const [showModal, setShowModal] = useState(false);
-  const [modalUrl, setModalUrl] = useState(null);
 
   const openModal = () => {
     setShowModal(prevState => !prevState);
@@ -154,7 +154,18 @@ const Consult = () => {
       </button>
         </form>
       </div>
+      {showModal && (
+          <Modal onClose={closeModal}>
+              <div className="consult__modal">
+                  <div className="consult__modal__svg"><CheckMarkSVG/></div>
+                  <h1 className="consult__modal__title">Дякуємо!</h1>
+                  <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
+                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+              </div>
+          </Modal>
+        )}
     </section>
+    
   )
 }
 
