@@ -3,10 +3,15 @@ import Navbar from './Navbar'
 import Networks from './Networks'
 import React, { useEffect, useState } from 'react'
 import {useRouter} from 'next/router';
+import BurgerSVG from '../../assets/svg/burger.svg'
+import BurgerCloseSVG from '../../assets/svg/burger-close.svg'
+
+
 
 const Header = () => {
   const [offset, setOffset] = useState(0);
   const { pathname } = useRouter();
+  const [ active, setActive ] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
@@ -18,7 +23,14 @@ const Header = () => {
   
   return (
     <header className={`header${(offset > 20 || pathname != '/') ? " scrolled" : ""}`}>
-      <div className="container header__container" style={{color: 'red'}}>
+      <div className="container header__container__desc">
+        <Logo /> 
+        <Navbar />
+        <Networks /> 
+      </div>
+      <button className={"header__menu-burger" + (active == true ? " isHidden" : "")} onClick={() => setActive(!active)}><BurgerSVG/></button>
+      <button className={"header__menu-burger--close" + (active == true ? "" : " isHidden")} onClick={() => setActive(!active)}><BurgerCloseSVG/></button>
+      <div className={"container header__container__mob" + (active == true ? "--active" : "")}>
         <Logo /> 
         <Navbar />
         <Networks /> 

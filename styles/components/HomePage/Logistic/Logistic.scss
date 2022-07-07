@@ -76,3 +76,110 @@
   }
   
 }
+
+@media screen and (max-width: 767px) {
+  .logistic {
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    &__container {
+     padding: 0 10px;
+    }
+  
+    &__title {
+      margin: 0 auto 10px;
+      width: 160px;
+    }
+  
+    &__text {
+      width: 223px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+  
+    &__cards {
+      position: relative;
+      display: block;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      &__image {
+        display: none;
+      }
+      &--left {
+        position: relative;
+        margin: 0 auto 88px;
+        width: 300px;
+        height: 315px; 
+        padding: 20px;
+        &-image {
+          position: absolute;
+          width: 300px;
+          height: 285px;
+          left: 0;
+          bottom: 0;
+        }
+        &::after {
+          position: absolute;
+          left: 80px;
+          bottom: -95px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+        &::before {
+          position: absolute;
+          left: 50%;
+          bottom: -95px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+      }
+      &--right {
+        position: relative;
+        margin: 0 auto;
+        width: 300px;
+        height: 315px; 
+        padding: 20px;
+        &-image {
+          position: absolute;
+          bottom: -10%;
+          right: 0;
+          width: 300px;
+          height: 210px;
+        }
+        &::before {
+          position: absolute;
+          right: 80px;
+          top: -92px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 19px;
+      }
+    }
+    &__text--bottom {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+  }
+
+
+}

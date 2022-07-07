@@ -23,45 +23,48 @@ const Consult = () => {
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }
 
   const handleSend = async (e: any) => {
     e.preventDefault()
-    // if (validate().length == 0) {
-    // }
-    openModal()
+    if (validate().length == 0) {
 
-    //   const data = {
-    //     title: 'Форма: Консультація з експертом',
-    //     name,
-    //     phone,
-    //     type: connectType,
-    //   };
+      const data = {
+        title: 'Форма: Консультація з експертом',
+        name,
+        phone,
+        type: connectType,
+        initialLink: localStorage
+        ? localStorage.getItem('url')
+        : false,
+      };
 
-    //   const JSONdata = JSON.stringify(data)
+      const JSONdata = JSON.stringify(data)
 
-    //   const endpoint = '/api/tg_bot'
+      const endpoint = '/api/tg_bot'
 
-    //   const options = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSONdata
-    //   }
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSONdata
+      }
 
-    //   const response = await fetch(endpoint, options)
+      const response = await fetch(endpoint, options)
 
-    //   const result = await response.json()
+      const result = await response.json()
+      openModal() 
 
-    //   if (result.status === 200) {
-    //     setName('')
-    //     setPhone('')
-    //   }
-    // }
+      if (result.status === 200) {
+        setName('')
+        setPhone('')
+        openModal()        
+      }
+    }
   }
 
   return (
@@ -73,15 +76,7 @@ const Consult = () => {
           <p className="consult__description section__text">
             Отримайте відповіді на всі ваші запитання! 
         </p>
-        <div className="consult__image">
-            <Image
-              className=""
-              src="/assets/images/details-consult.png"
-              layout="fill"
-              objectFit="cover"
-              alt='car'
-              />
-          </div>
+       
         </div>
         <form className="consult__form">
         <div className="consult__form__input-wrapper">
@@ -150,9 +145,27 @@ const Consult = () => {
         </div>
       </div>
       <button className="consult__form-btn" onClick={handleSend}>
-        Відправити
+        Надіслати
       </button>
         </form>
+        <div className="consult__image--desc">
+            <Image
+              className=""
+              src="/assets/images/details-consult.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
+          <div className="consult__image--mob">
+            <Image
+              className=""
+              src="/assets/images/details-mob.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
       </div>
       {showModal && (
           <Modal onClose={closeModal}>
@@ -160,7 +173,7 @@ const Consult = () => {
                   <div className="consult__modal__svg"><CheckMarkSVG/></div>
                   <h1 className="consult__modal__title">Дякуємо!</h1>
                   <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+                  <p className='consult__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}

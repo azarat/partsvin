@@ -22,45 +22,47 @@ const ConsultBottom = () => {
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }
 
   const handleSend = async (e: any) => {
     e.preventDefault()
-    // if (validate().length == 0) {
-    // }
-    openModal()
+    if (validate().length == 0) {
 
-    //   const data = {
-    //     title: 'Форма: Консультація з експертом',
-    //     name,
-    //     phone,
-    //     type: connectType,
-    //   };
+      const data = {
+        title: 'Форма: Консультація з експертом',
+        name,
+        phone,
+        type: connectType,
+        initialLink: localStorage
+        ? localStorage.getItem('url')
+        : false,
+      };
 
-    //   const JSONdata = JSON.stringify(data)
+      const JSONdata = JSON.stringify(data)
 
-    //   const endpoint = '/api/tg_bot'
+      const endpoint = '/api/tg_bot'
 
-    //   const options = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSONdata
-    //   }
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSONdata
+      }
 
-    //   const response = await fetch(endpoint, options)
+      const response = await fetch(endpoint, options)
 
-    //   const result = await response.json()
-
-    //   if (result.status === 200) {
-    //     setName('')
-    //     setPhone('')
-    //   }
-    // }
+      const result = await response.json()
+      openModal()
+      if (result.status === 200) {
+        setName('')
+        setPhone('')
+        openModal()
+      }
+    }
   }
 
   return (
@@ -159,7 +161,7 @@ const ConsultBottom = () => {
                   <div className="consult__modal__svg"><CheckMarkSVG/></div>
                   <h1 className="consult__modal__title">Дякуємо!</h1>
                   <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='consult__modal__text'>Ми зв'яжемося з вами найближчим часом!</p>
+                  <p className='consult__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}

@@ -53,25 +53,43 @@
       }      
       &:nth-child(1) {
         background: linear-gradient(rgba(246, 156, 63, 0.85), rgba(246, 156, 63, 0.85)), url('../../../../public/assets/images/services_01.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       &:nth-child(2) {
         background: linear-gradient(rgba(32, 32, 32, 0.85), rgba(32, 32, 32, 0.85)), url('../../../../public/assets/images/services_02.png');
         margin-top: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       &:nth-child(3) {
         background: linear-gradient(rgba(246, 156, 63, 0.85), rgba(246, 156, 63, 0.85)), url('../../../../public/assets/images/services_03.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: 100px;
       }
       &:nth-child(4) {
         background: linear-gradient(rgba(32, 32, 32, 0.85), rgba(32, 32, 32, 0.85)), url('../../../../public/assets/images/services_04.png');
         margin-top: -100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       &:nth-child(5) {
         background: linear-gradient(rgba(246, 156, 63, 0.85), rgba(246, 156, 63, 0.85)), url('../../../../public/assets/images/services_05.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: -50px;
       }
       &:nth-child(6) {
         background: linear-gradient(rgba(32, 32, 32, 0.85), rgba(32, 32, 32, 0.85)), url('../../../../public/assets/images/services_06.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }
@@ -82,5 +100,90 @@
     top: -60px;
     height: calc(100% + 157px);
     width: 328px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 97px;
+    &__container {
+      padding: 0 10px;
+    }
+    &::before {
+      position: absolute;
+      background-image: url('../../../../public/assets/svg/overlap-black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      width: 100%;
+      height: 15%;
+      bottom: 0;
+      content: '';
+    }
+    &__grid {
+      display: block;
+  
+      &__item {
+        height: 220px;
+        width: 220px;
+        padding: 20px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        
+        &:nth-child(2n+1) {
+          margin-left: auto;
+        }
+
+        &:nth-child(2n+1) &--num {
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 25px;
+          margin-bottom: 5px;
+        }
+        &:nth-child(2n) &--num {
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 25px;
+          margin-bottom: 5px;
+      }
+        &:nth-child(2n+1) &--text {
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 25px;
+        }
+        &:nth-child(2n) &--text {
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 25px;
+        }      
+       
+        &:nth-child(2) {
+          margin-top: 0px;
+        }
+        &:nth-child(3) {
+          margin-top: 0px;
+        }
+        &:nth-child(4) {
+          margin-top: 0px;
+        }
+        &:nth-child(5) {
+          margin-top: 0px;
+        }
+      }
+    }
+  
+    &__image {
+      position: absolute;
+      right: 0px;
+      bottom: -97px; /* padding */
+      top: auto;
+      height: 314px;
+      width: 114px;
+    }
   }
 }
