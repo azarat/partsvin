@@ -74,15 +74,6 @@ const ConsultBottom = () => {
           <p className="consultBottom__description section__text">
             Залиште контакт, наш експерт точно відповість на них!
           </p>
-        <div className="consultBottom__image">
-            <Image
-              className=""
-              src="/assets/images/details-consult.png"
-              layout="fill"
-              objectFit="cover"
-              alt='car'
-              />
-          </div>
         </div>
         <form className="consultBottom__form">
         <div className="consultBottom__form__input-wrapper">
@@ -151,17 +142,35 @@ const ConsultBottom = () => {
         </div>
       </div>
       <button className="consultBottom__form-btn" onClick={handleSend}>
-        Відправити
+        Надіслати
       </button>
         </form>
+        <div className="consultBottom__image--desc">
+            <Image
+              className=""
+              src="/assets/images/details-consult.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+          </div>
+          <div className="consultBottom__image--mob">
+            <Image
+              className=""
+              src="/assets/images/details-mob.png"
+              layout="fill"
+              objectFit="contain"
+              alt='car'
+              />
+          </div>
       </div>
       {showModal && (
           <Modal onClose={closeModal}>
-              <div className="consult__modal">
-                  <div className="consult__modal__svg"><CheckMarkSVG/></div>
-                  <h1 className="consult__modal__title">Дякуємо!</h1>
-                  <h2 className='consult__modal__pre-title'>дані успішно відправлені</h2>
-                  <p className='consult__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
+              <div className="consultBottom__modal">
+                  <div className="consultBottom__modal__svg"><CheckMarkSVG/></div>
+                  <h1 className="consultBottom__modal__title">Дякуємо!</h1>
+                  <h2 className='consultBottom__modal__pre-title'>дані успішно відправлені</h2>
+                  <p className='consultBottom__modal__text'>Ми зв`яжемося з вами найближчим часом!</p>
               </div>
           </Modal>
         )}
