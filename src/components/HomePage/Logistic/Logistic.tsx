@@ -39,7 +39,8 @@ const Logistic = () => {
             </div>
           </div>
         </div>
-        <p className="section__text logistic__text--bottom">Ми доставляємо запчастини з усіх країн світу. Далі забезпечуємо логістику по Україні <span className="orange-text">у найкоротші терміни</span></p>
+        <p className="section__text logistic__text--bottom">Ми доставляємо запчастини з усіх країн світу.</p>
+        <p className="section__text logistic__text--bottom">Далі забезпечуємо логістику по Україні <span className="orange-text">у найкоротші терміни</span></p>
       </div>
     </section>
   )
