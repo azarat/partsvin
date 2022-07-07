@@ -8,10 +8,19 @@ const Storage = () => {
         <h2 className='title storage__title'>БЕЗКОШТОВНЕ ЗБЕРІГАННЯ ВАШИХ ЗАПЧАСТин</h2>
       </div>
       <div className="storage__wrapper">
-        <div className="storage__image">
+        <div className="storage__image--desc">
           <Image
               className=""
               src="/assets/images/storage.png"
+              layout="fill"
+              objectFit="cover"
+              alt='car'
+              />
+        </div>
+        <div className="storage__image--mob">
+          <Image
+              className=""
+              src="/assets/images/storage-mob.png"
               layout="fill"
               objectFit="cover"
               alt='car'
