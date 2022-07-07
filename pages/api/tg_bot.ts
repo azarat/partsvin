@@ -20,7 +20,7 @@ const handler = async (
   const endpoint = 'https://api.telegram.org/bot' + process.env.botKey + '/sendMessage';
 
   const data = {
-    chat_id: '@cfwrequests',
+    chat_id: '@partsvin2022',
     text: msg
   };
 
