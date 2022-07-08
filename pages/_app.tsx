@@ -7,12 +7,12 @@ import '../styles/main.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const initialLink = sessionStorage.getItem('initialLink')
-      if (!initialLink) sessionStorage.setItem('initialLink', location.href)
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const initialLink = sessionStorage.getItem('initialLink')
+  //     if (!initialLink) sessionStorage.setItem('initialLink', location.href)
+  //   }
+  // }, [])
 
   return (
     <>

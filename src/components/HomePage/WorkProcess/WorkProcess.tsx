@@ -8,8 +8,8 @@ const WorkProcess = () => {
     <section className='workProcess' id='workProcess'>
       <div className="container workProcess__container">
         <h2 className='title workProcess__title'>Процес роботи</h2>
-      </div>
-      <ul className="workProcess__cards">
+        <div className="workProcess__wrapper">
+        <ul className="workProcess__cards">
           {WorkProccesCards.map(({ id, num, title, text}) => (
             <li key={id} className="workProcess__cards__item">
               <p className='workProcess__cards__item--num'>{num}</p>
@@ -27,6 +27,9 @@ const WorkProcess = () => {
            alt='car'
           />
         </div>
+        </div>
+      </div>
+      
     </section>
   )
 }

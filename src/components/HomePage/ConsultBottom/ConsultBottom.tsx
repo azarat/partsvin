@@ -36,9 +36,9 @@ const ConsultBottom = () => {
         name,
         phone,
         type: connectType,
-        initialLink: localStorage
-        ? localStorage.getItem('url')
-        : false,
+        // initialLink: localStorage
+        // ? localStorage.getItem('url')
+        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -56,11 +56,11 @@ const ConsultBottom = () => {
       const response = await fetch(endpoint, options)
 
       const result = await response.json()
-      openModal()
-      if (result.status === 200) {
+      
+      if (result.ok) {
         setName('')
         setPhone('')
-        openModal()
+        openModal()        
       }
     }
   }
@@ -102,14 +102,14 @@ const ConsultBottom = () => {
       <div className="consultBottom__form-checkbox-wrappers">
         <div className="consultBottom__form-checkbox-wrapper">
           <input
-            id="tel"
-            name="tel"
+            id="telBt"
+            name="telBt"
             type="radio"
             className="consultBottom__form-checkbox"
             onChange={() => setConnectType('tel')}
             checked={connectType === 'tel'}
           />
-          <label className="consultBottom__form-label" htmlFor="tel">
+          <label className="consultBottom__form-label" htmlFor="telBt">
             Дзвінок
           </label>
         </div>
@@ -117,26 +117,26 @@ const ConsultBottom = () => {
         <div className="consultBottom__form-checkbox-wrapper">
           <input
             type="radio"
-            id="telegram"
-            name="telegram"
+            id="telegramBt"
+            name="telegramBt"
             className="consultBottom__form-checkbox"
             onChange={() => setConnectType('telegram')}
             checked={connectType === 'telegram'}
           />
-          <label className="consultBottom__form-label" htmlFor="telegram">
+          <label className="consultBottom__form-label" htmlFor="telegramBt">
             Telegram
           </label>
         </div>
         <div className="consultBottom__form-checkbox-wrapper">
           <input
             type="radio"
-            id="viber"
-            name="viber"
+            id="viberBt"
+            name="viberBt"
             className="consultBottom__form-checkbox"
             onChange={() => setConnectType('viber')}
             checked={connectType === 'viber'}
           />
-          <label className="consultBottom__form-label" htmlFor="viber">
+          <label className="consultBottom__form-label" htmlFor="viberBt">
             Viber
           </label>
         </div>

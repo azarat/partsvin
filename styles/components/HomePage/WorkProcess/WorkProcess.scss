@@ -3,29 +3,33 @@
   padding-top: 60px;
   padding-bottom: 235px;
 
-  &::before {
-    position: absolute;
-    background-image: url('../../../../public/assets/svg/overlap-black.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    width: 100%;
-    height: 15%;
-    bottom: 0;
-    content: '';
-  }
+ 
 
   &__title {
     color: $black-color;
     margin-bottom: 50px;
   }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+  }
+  &__image {
+    position: relative;
+    transform: translate(0, 0%);
+    background-color: $dark-grey-color;
+    min-width: 590px;
+    height: 918px;
+    right: 200px;
+  }
   &__cards {
-    position: absolute;
+    position: relative;
+    right: 200px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    width: 1330px;
+    min-width: 1330px;
     padding: 71px 0;
     background-color: $orange-color;
     &__item {
@@ -153,14 +157,7 @@
       
     }
   }
-  &__image {
-    position: relative;
-    left: 1330px;
-    transform: translate(0, 10%);
-    background-color: $dark-grey-color;
-    width: calc(100% - 1330px);
-    height: 918px;
-  }
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -168,6 +165,20 @@
     position: relative;
     padding-top: 40px;
     padding-bottom: 0;
+
+    &::before {
+      position: absolute;
+      background-image: url('../../../../public/assets/svg/overlap-black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      width: 100%;
+      height: 15%;
+      bottom: 0;
+      content: '';
+    }
+
     &__title {
       margin-bottom: 20px;
     }
