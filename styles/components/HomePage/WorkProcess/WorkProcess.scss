@@ -189,6 +189,8 @@
       width: 100%;
       padding: 30px 10px 77px;
       background-color: $orange-color;
+      right: auto;
+      min-width: auto;
       &__item {
         position: relative;
         &:not(:last-child) {
