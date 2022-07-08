@@ -63,6 +63,46 @@
   }
 }
 
+@media screen and(max-width: 1520px) {
+  .footer {
+    padding: 30px;
+
+    &__logo {
+      & svg {
+        width: 157px;
+        height: 48px;
+      }
+    }
+  
+    &__nav__menu {
+      grid-row-gap: 30px;
+  
+      &__link {
+        font-size: 21px;
+        line-height: 25px;
+      }
+    }
+  
+    &__address {
+      &--text {
+        font-size: 18px;
+        line-height: 21px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  
+    &__networks {
+        grid-gap: 25px;
+      &__item {
+        width: 49px;
+        height: 49px;
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 767px) {
   .footer {
     background-color: $dark-grey-color;
