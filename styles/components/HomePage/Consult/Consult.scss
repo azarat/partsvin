@@ -181,6 +181,90 @@
   }
 }
 
+@media screen and (max-width: 1520px) {
+  .consult {
+    &__container {
+      padding: 50;
+    }
+    &__text {
+      width: 650px;
+    }
+    &__title {
+      text-align: start;
+      margin-bottom: 30px;
+    }
+    &__description {
+      width: 287px;
+      margin-left: 59%;
+    }
+    &__image--desc {
+      height: 300px;
+      width: 443px;
+    }
+    &__image--mob {
+      display: none;
+    }
+  
+    &__form {
+      min-width: 399px;
+
+      &-input {
+        padding: 23px;
+        font-size: 20px;
+        line-height: 23px;
+        cursor: pointer;
+        &::placeholder {
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+      &-checkbox-wrappers {
+        margin-bottom: 65px;
+      }
+  
+      &-label {
+        font-size: 20px;
+        line-height: 23px;
+        cursor: pointer;
+        &::before {
+          min-width: 20px;
+          height: 20px;
+          margin-right: 13px;
+          content: '';
+        }
+      }
+
+      &-btn {
+        padding: 24px;
+        width: 275px;
+        height: 71px;
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+    &__modal {
+      height: 584px;
+      padding: 70px 55px;
+  
+      &__title {
+        font-weight: 400;
+        font-size: 85px;
+        line-height: 86px;
+        margin-bottom: 16px;
+      }
+      &__pre-title {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 35px;
+      }
+      &__text {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .consult {
     padding: 0 0 30px 0;
