@@ -136,11 +136,11 @@
       touch-action: none;
       user-select:none;
       opacity: 0;
-      right: -50px;
-      top: -50px;
+      right: -100%;
       transition: all .35s ease;
     }
     &__container__mob--active {
+        position: absolute;
         background-color: $white-color;
         display: flex;
         flex-direction: column;
@@ -152,9 +152,9 @@
         pointer-events: all;
         touch-action: all;
         opacity: 1;
-        right: 0px;
-        top: 0px;
-        margin-right: 0;
+        right: 0;
+        top: 0;
+        transition: all .35s ease;
     }
 
     &__logo {

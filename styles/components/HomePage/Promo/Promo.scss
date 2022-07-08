@@ -182,7 +182,7 @@
       &::before {
         position: absolute;
         top: 22%;
-        width: 4px;
+        width: 2px;
         height: 87px;
         background-color: $orange-color;
         content: '';
@@ -191,9 +191,9 @@
       &::after {
         position: absolute;
         bottom: -43%;
-        width: 4px;
+        width: 2px;
         height: 115px;
-        right: 0;
+        right: 10px;
         background-color: $orange-color;
         content: '';
       }
