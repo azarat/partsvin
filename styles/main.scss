@@ -49,6 +49,9 @@ html {
   @media screen and(max-width: 767px) {
     width: 100%;
   }
+  @media screen and(max-width: 1520px) {
+    width: 1200px;
+  }
   // @media screen and(max-width: 480px) {
   //   width: 320px;
   // }
@@ -68,6 +71,10 @@ html {
     font-size: 25px;
     line-height: 30px;
   }
+
+  @media screen and(max-width: 1520px) {
+    font-size: 45px;
+  }
 }
 
 .title {
@@ -82,6 +89,10 @@ html {
     font-size: 25px;
     line-height: 30px;
   }
+  
+  @media screen and(max-width: 1520px) {
+    font-size: 50px;
+  }
 }
 
 .section__text {
@@ -93,6 +104,9 @@ html {
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
+  }
+  @media screen and(max-width: 1520px) {
+    font-size: 20px;
   }
 }
 

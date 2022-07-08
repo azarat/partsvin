@@ -13,7 +13,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
   }
   &__image {
     position: relative;
@@ -21,11 +21,11 @@
     background-color: $dark-grey-color;
     min-width: 590px;
     height: 918px;
-    right: 200px;
+    // right: 200px;
   }
   &__cards {
     position: relative;
-    right: 200px;
+    // right: 200px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
