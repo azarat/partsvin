@@ -1,7 +1,7 @@
 .workProcess {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 235px;
+  padding-bottom: 70px;
 
  
 
@@ -153,12 +153,93 @@
       &--text {
         position: relative;
       }
-  
-      
     }
   }
-  
 }
+
+
+
+@media screen and (max-width: 1520px) {
+  .workProcess {
+    padding-bottom: 74px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__image {
+      min-width: 370px;
+      height: 808px;
+    }
+    &__cards {
+      min-width: 1070px;
+      padding: 60px 0;
+      &__item {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 90px;
+        }
+        &:nth-child(1) {
+          &::after {
+            width: 55px;
+            height: 8px;
+            content: '';
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            
+            width: 55px;
+            height: 8px;
+            content: '';
+          }
+        }
+        &:nth-child(4) {
+          &::after {
+            position: absolute;
+            right: -30%;
+            top: 60px;
+            width: 99px;
+            content: '';
+          }
+        }
+        &:nth-child(5) {
+          margin-bottom: 0;
+          &::after {
+            width: 55px;
+            height: 8px;
+            content: '';
+          }
+  
+          &::before {
+            position: absolute;
+            left: 0;
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 130px;
+            height: 12px;
+            content: '';
+          }
+        }
+        &:nth-child(6) {
+          padding-left: 132px;
+         
+        }
+        width: 475px;
+        &--title {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 35px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }  
+}
+
+
 
 @media screen and (max-width: 767px) {
   .workProcess {

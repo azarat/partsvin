@@ -334,3 +334,107 @@
     }
   }
 }
+
+@media screen and (max-width: 1520px) {
+  .troubleshooting {
+    padding: 60px 0 220px;
+    &::before {
+      position: absolute;
+      background-image: url('../../../../public/assets/svg/overlap-black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      width: 100%;
+      height: 15%;
+      bottom: 0;
+      content: '';
+    }
+    &__container {
+      justify-content: flex-start;
+      padding: 50;
+      &--bg {
+        position: absolute;
+        bottom: 35%;
+        right: 0;
+        width: 50%;
+        height: 30%;
+        background: rgba(255, 169, 81, 0.6);
+        filter: blur(150px);
+      }
+    }
+    &__text {
+      width: 511px;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__description {
+      width: 372px;
+    }
+    &__image--desc {
+      top: 55%;
+      left: 50%;
+      height: 435px;
+      width: 682px;
+    }
+  
+    &__form {
+      min-width: 399px;
+      margin-right: 50px;
+      &-input {
+        padding: 23px;
+        font-size: 20px;
+        line-height: 23px;
+        cursor: pointer;
+        &::placeholder {
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+      &-checkbox-wrappers {
+        margin-bottom: 65px;
+      }
+  
+      &-label {
+        font-size: 20px;
+        line-height: 23px;
+        cursor: pointer;
+        &::before {
+          min-width: 20px;
+          height: 20px;
+          margin-right: 13px;
+          content: '';
+        }
+      }
+
+      &-btn {
+        padding: 24px;
+        width: 275px;
+        height: 71px;
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+    &__modal {
+      height: 584px;
+      padding: 70px 55px;
+  
+      &__title {
+        font-weight: 400;
+        font-size: 85px;
+        line-height: 86px;
+        margin-bottom: 16px;
+      }
+      &__pre-title {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 35px;
+      }
+      &__text {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
+  }
+}
