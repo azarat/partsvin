@@ -22,7 +22,7 @@ const Storage = () => {
               className=""
               src="/assets/images/storage-mob.png"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               alt='car'
               />
         </div>

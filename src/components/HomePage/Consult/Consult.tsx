@@ -162,7 +162,7 @@ const Consult = () => {
               className=""
               src="/assets/images/details-mob.png"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               alt='car'
               />
           </div>

@@ -64,3 +64,65 @@
     }
   }
 }
+
+@media screen and(max-width: 767px) {
+  .faq {
+    position: relative;
+    padding: 40px 10px 60px;
+  
+    &__title {
+      margin-bottom: 22px;
+    }
+  
+    &__accordion {
+      &-item {
+        padding: 14px 10px;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-bottom: 1px;
+        }
+        &-title {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 13px;
+          &::after {
+            position: absolute;
+            right: 0px;
+            width: 10px;
+            height: 10px;
+            background-image: url('../../../../public/assets/svg/cross.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+            content: '';
+          }
+        }
+        &-text {
+          width: 100%;
+          max-height: 0px;
+          overflow: hidden;
+          transition: all 0.5s ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+        &--open {
+          padding-left: 20px;
+          padding-bottom: 20px;
+          & .faq__accordion-item-title {
+            &::after {
+              transform: rotate(45deg);
+            }
+          }
+          & .faq__accordion-item-text {
+            max-height: 330px;
+            margin-top: 10px;
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
+}

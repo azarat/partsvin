@@ -153,7 +153,7 @@ const Troubleshooting = () => {
               className=""
               src="/assets/images/troubleshooting-car-mob.png"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               alt='car'
               />
           </div>
