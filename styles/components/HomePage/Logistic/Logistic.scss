@@ -127,7 +127,71 @@
   }
 }
 
-
+@media screen and (max-width: 1270px)  {
+  .logistic {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    &__text {
+      width: 265px;
+      margin: 0 auto 40px;
+    }
+  
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 95px;
+      &__image {
+        position: relative;
+        width: 216px;
+        height: 216px;
+        transform: rotate(90deg);
+        top: auto;
+        right: auto;
+      }
+      &--left {
+        width: 466px;
+        height: 559px;
+        padding: 30px;
+        background: url('../../../../public/assets/images/logistic-inter.png');
+        background-repeat: no-repeat;
+        background-color: rgba(246, 156, 63, 0.85);
+        &-image {
+          position: absolute;
+          width: 511px;
+          height: 443px;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      &--right {
+        width: 466px;
+        height: 559px;
+        padding: 30px;
+        &-image {
+          position: absolute;
+          bottom: -15%;
+          right: 0;
+          width: 517px;
+          height: 346px;
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;  
+      }
+    }
+    &__text--bottom {
+        width: 465px;
+    }
+    
+  }
+    
+}
 
 @media screen and (max-width: 767px) {
   .logistic {

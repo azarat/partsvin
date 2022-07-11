@@ -13,7 +13,7 @@ const Storage = () => {
               className=""
               src="/assets/images/storage.png"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               alt='car'
               />
         </div>
@@ -27,10 +27,14 @@ const Storage = () => {
               />
         </div>
         <div className="storage__description">
+          <div>
           <h3 className='storage__description__title'>Центральний склад у Києві</h3>
           <p className='section__text storage__description__text'>створено ідеальні умови для зберігання запчастин (температура, вологість).</p>
+          </div>
+          <div>
           <h3 className='storage__description__title'>Безкоштовне зберігання</h3>
           <p className='section__text storage__description__text'>запчастини наших клієнтів зберігаються до їх приїзду на СТО.</p>
+          </div>
         </div>
       </div>
     </section>
