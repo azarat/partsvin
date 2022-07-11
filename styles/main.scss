@@ -48,7 +48,7 @@ html {
   width: 1520px;
 
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     width: 1200px;
   }
   @media screen and(max-width: 767px) {
@@ -67,7 +67,7 @@ html {
   text-transform: uppercase;
 
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 45px;
   }
 
@@ -87,7 +87,7 @@ html {
   color: $white-color;
   text-transform: uppercase;
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 50px;
   }
 
@@ -104,7 +104,7 @@ html {
   font-size: 25px;
   line-height: 38px;
   color: $white-color;
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 20px;
   }
   
