@@ -8,8 +8,8 @@ const handler = async (
   let msg = "Заявка з сайту\r\n"
   if (req.body.hasOwnProperty("title"))
     msg = req.body.title + "\r\n";
-  if (req.body.hasOwnProperty("initialLink"))
-    msg += "Url: " + req.body.initialLink + "\r\n";
+  // if (req.body.hasOwnProperty("initialLink"))
+  //   msg += "Url: " + req.body.initialLink + "\r\n";
   if (req.body.hasOwnProperty("name"))
     msg += "Имя: " + req.body.name + "\r\n";
   if (req.body.hasOwnProperty("phone"))

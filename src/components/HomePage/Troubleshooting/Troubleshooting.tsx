@@ -38,9 +38,9 @@ const Troubleshooting = () => {
         name,
         phone,
         type: connectType,
-        initialLink: localStorage
-        ? localStorage.getItem('url')
-        : false,
+        // initialLink: localStorage
+        // ? localStorage.getItem('url')
+        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -58,12 +58,11 @@ const Troubleshooting = () => {
       const response = await fetch(endpoint, options)
 
       const result = await response.json()
-      openModal()
-
-      if (result.status === 200) {
+      
+      if (result.ok) {
         setName('')
         setPhone('')
-        openModal()
+        openModal()        
       }
     }
   }
@@ -99,14 +98,14 @@ const Troubleshooting = () => {
       <div className="troubleshooting__form-checkbox-wrappers">
         <div className="troubleshooting__form-checkbox-wrapper">
           <input
-            id="tel"
-            name="tel"
+            id="telTr"
+            name="telTr"
             type="radio"
             className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('tel')}
             checked={connectType === 'tel'}
           />
-          <label className="troubleshooting__form-label" htmlFor="tel">
+          <label className="troubleshooting__form-label" htmlFor="telTr">
             Дзвінок
           </label>
         </div>
@@ -114,26 +113,26 @@ const Troubleshooting = () => {
         <div className="troubleshooting__form-checkbox-wrapper">
           <input
             type="radio"
-            id="telegram"
-            name="telegram"
+            id="telegramTr"
+            name="telegramTr"
             className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('telegram')}
             checked={connectType === 'telegram'}
           />
-          <label className="troubleshooting__form-label" htmlFor="telegram">
+          <label className="troubleshooting__form-label" htmlFor="telegramTr">
             Telegram
           </label>
         </div>
         <div className="troubleshooting__form-checkbox-wrapper">
           <input
             type="radio"
-            id="viber"
-            name="viber"
+            id="viberTr"
+            name="viberTr"
             className="troubleshooting__form-checkbox"
             onChange={() => setConnectType('viber')}
             checked={connectType === 'viber'}
           />
-          <label className="troubleshooting__form-label" htmlFor="viber">
+          <label className="troubleshooting__form-label" htmlFor="viberTr">
             Viber
           </label>
         </div>
@@ -157,8 +156,7 @@ const Troubleshooting = () => {
               alt='car'
               />
           </div>
-      </div>
-      <div className="troubleshooting__image--desc">
+          <div className="troubleshooting__image--desc">
             <Image
               className=""
               src="/assets/images/troubleshooting-car.png"
@@ -167,6 +165,8 @@ const Troubleshooting = () => {
               alt='car'
               />
           </div>
+      </div>
+      
       {showModal && (
           <Modal onClose={closeModal}>
               <div className="troubleshooting__modal">

@@ -37,9 +37,9 @@ const Consult = () => {
         name,
         phone,
         type: connectType,
-        initialLink: localStorage
-        ? localStorage.getItem('url')
-        : false,
+        // initialLink: localStorage
+        // ? localStorage.getItem('url')
+        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -57,9 +57,8 @@ const Consult = () => {
       const response = await fetch(endpoint, options)
 
       const result = await response.json()
-      openModal() 
-
-      if (result.status === 200) {
+      
+      if (result.ok) {
         setName('')
         setPhone('')
         openModal()        

@@ -77,6 +77,58 @@
   
 }
 
+
+@media screen and (max-width: 1520px) {
+  .logistic {
+    &__text {
+      width: 347px;
+    }
+  
+    &__cards {
+      margin-bottom: 60px;
+      &__image {
+        width: 280px;
+        height: 216px;
+        top: 104px;
+        right: 460px;
+      }
+      &--left {
+        width: 460px;
+        height: 552px;
+        &-image {
+          width: 530px;
+          height: 458px;
+        }
+      }
+      &--right {
+        width: 460px;
+        height: 552px;
+        &-image {
+          width: 517px;
+          height: 346px;
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $black-color;
+      }
+    }
+    &__text--bottom {
+      width: 830px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+  }
+}
+
+
+
 @media screen and (max-width: 767px) {
   .logistic {
     padding-top: 30px;
@@ -180,6 +232,4 @@
     }
     
   }
-
-
 }

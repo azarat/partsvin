@@ -2,7 +2,7 @@
   position: relative;
   background-color: $dark-grey-color;
   padding-top: 60px;
-  padding-bottom: 300px;
+  padding-bottom: 176px;
   
   &::before {
     position: absolute;
@@ -47,6 +47,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 767px) {
   .advantages {
@@ -95,4 +96,48 @@
     }
   }
   
+}
+
+
+@media screen and (max-width: 1520px) {
+  .advantages {
+    padding-top: 0;
+    padding-bottom: 153px;
+    
+    &::before {
+      position: absolute;
+      background-image: url('../../../../public/assets/svg/overlap.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      width: 100%;
+      height: 15%;
+      bottom: 0;
+      content: '';
+    }
+  
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__cards {
+      &__item {
+        &--text {
+          position: relative;
+          &::before {
+            left: -29px;
+            content: '';
+          }
+        }
+        padding-left: 29px;
+        width: 383px;
+        &:not(:last-child) {
+          margin-bottom: 53px;
+        }
+        &:last-child {
+          width: 413px;
+        }
+      }
+    }
+  }
 }

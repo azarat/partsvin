@@ -11,6 +11,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   &__image--desc {
     position: relative;
@@ -39,6 +40,37 @@
       width: 510px;
       &:not(:last-child) {
         margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1520px) {
+  .storage {
+    padding-bottom: 60px;
+    &__title {
+      width: 679px;
+      margin: 0 auto 60px;
+    }
+    &__image--desc {
+      width: 858px;
+      height: 517px;
+    }
+    &__description {
+      padding: 40px 70px;
+      min-width: 582px;
+
+      &__title {
+        font-size: 30px;
+        line-height: 35px;
+        width: 228px;
+      }
+      &__text {
+        width: 399px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -96,3 +128,4 @@
     }
   }
 }
+

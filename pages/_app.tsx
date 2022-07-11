@@ -7,19 +7,13 @@ import '../styles/main.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const initialLink = sessionStorage.getItem('initialLink')
-      if (!initialLink) sessionStorage.setItem('initialLink', location.href)
-    }
-  }, [])
-
   return (
     <>
       <Head>
         <title>
           Partsvin
         </title>
+        <link rel="shortcut icon" href='/assets/svg/favicon.svg' />
         <link
           rel="shortcut icon"
           href="/assets/images/favicon.ico"

@@ -19,7 +19,18 @@ const Reviews = () => {
     customPaging: (i: any) => (
       <div className="ft-slick__dots--custom">
         <div className="loading" />
-      </div>)
+      </div>),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
   };
   function SampleArrowNext(props: any) {
     const { className, style, onClick } = props;

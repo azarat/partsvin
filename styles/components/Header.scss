@@ -38,7 +38,7 @@
     display: flex;
     &__item {
       &:not(:last-child) {
-        margin-right: 45px;
+        margin-right: 56px;
       }
     }
     &__link {
@@ -74,6 +74,45 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .header {
+    height: 153px;
+    &.scrolled {
+      height: 80px;
+    }
+    &__logo {
+      & svg {
+        width: 157px;
+        height: 48px;
+      }
+    }
+  
+    &__nav__menu {
+      display: flex;
+      &__item {
+        &:not(:last-child) {
+          margin-right: 54px;
+        }
+      }
+      &__link {
+        font-size: 20px;
+        line-height: 23px;
+        color: $white-color;
+      }
+    }
+  
+    &__networks {  
+      &__item {
+        width: 49px;
+        height: 49px;
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+      }
     }
   }
 }
