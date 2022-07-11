@@ -37,9 +37,6 @@ const Consult = () => {
         name,
         phone,
         type: connectType,
-        // initialLink: localStorage
-        // ? localStorage.getItem('url')
-        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -153,6 +150,15 @@ const Consult = () => {
               src="/assets/images/details-consult.png"
               layout="fill"
               objectFit="cover"
+              alt='car'
+              />
+          </div>
+          <div className="consult__image--tab">
+            <Image
+              className=""
+              src="/assets/images/details-tab.png"
+              layout="fill"
+              objectFit="contain"
               alt='car'
               />
           </div>
