@@ -14,6 +14,14 @@ const Footer: React.FC = () => {
         <Address/>
         <Networks/>
       </div>
+      <div className="container footer__containerTab">
+        <div className="footer__wrapper">
+          <Logo/>
+          <Networks/>
+        </div>
+        <Navbar/>
+        <Address/>
+      </div>
     </footer>
   )
 }
