@@ -22,6 +22,15 @@ const Reviews = () => {
       </div>),
     responsive: [
       {
+        breakpoint: 1270,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
@@ -37,7 +46,7 @@ const Reviews = () => {
     return (
       <div
         className={className}
-        style={{position: "absolute", top: "110%", display: "flex", alignItems: "center", justifyContent: 'center', width: "75px", height: "75px", background: "linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%)", boxShadow: "0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2)", transform: "rotate(45deg)", right: "25%" }}
+        style={{position: "absolute", top: "109%", display: "flex", alignItems: "center", justifyContent: 'center', width: "75px", height: "75px", background: "linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%)", boxShadow: "0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2)", transform: "rotate(45deg)", right: "25%" }}
         onClick={onClick}
       />
     );
@@ -47,7 +56,7 @@ const Reviews = () => {
     return (
       <div
         className={className}
-        style={{...style, position: "absolute", top: "110%", display: "flex", alignItems: "center", justifyContent: 'center', width: "75px", height: "75px", background: "linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%)", boxShadow: "0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2)", transform: "rotate(45deg)", left: '21%' }}
+        style={{...style, position: "absolute", top: "109%", display: "flex", alignItems: "center", justifyContent: 'center', width: "75px", height: "75px", background: "linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%)", boxShadow: "0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2)", transform: "rotate(45deg)", left: '21%' }}
         onClick={onClick}
       />
     );

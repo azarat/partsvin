@@ -107,6 +107,66 @@ img-comparison-slider {
   }
 }
 
+@media screen and(max-width: 1270px) {
+  .clients {
+    padding-top: 40px;
+    padding-bottom: 157px;
+    &::before {
+      position: absolute;
+      background-image: url('../../../../public/assets/svg/overlap.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      width: 100%;
+      height: 10%;
+      bottom: 0;
+      content: '';
+    }
+  
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__cards {
+           
+      &__item {
+        width: 367px;
+        height: 247px;
+        &:nth-child(1) {
+          margin-bottom: 50px;
+        }
+        &:nth-child(2) {
+          margin-bottom: 50px;
+        }
+        
+        &--image {
+          margin-bottom: 0;
+          width: 367px;
+          height: 247px;
+
+          & img {
+            width: 367px;
+        height: 247px;
+          }
+        }
+        &--text {
+          font-size: 21px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  
+  img-comparison-slider {
+    & .handler {
+      width: 18px;
+      height: 17px;
+    }
+  }
+  
+  
+}
+
 
 @media screen and(max-width: 767px) {
   .clients {
