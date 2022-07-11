@@ -6,8 +6,11 @@ import {useRouter} from 'next/router';
 import BurgerSVG from '../../assets/svg/burger.svg'
 import BurgerCloseSVG from '../../assets/svg/burger-close.svg'
 import NetworksMob from './NetworksMob';
+import NetworksTab from './NetworksTab';
 import Address from './Address';
 import Modal from '../HomePage/Modal/Modal'
+import LogoTab from './LogoTab';
+
 
 const Header = () => {
   const [offset, setOffset] = useState(0);
@@ -15,14 +18,6 @@ const Header = () => {
   const [ active, setActive ] = useState(false)
 
   const [showModal, setShowModal] = useState(false);
-  // const openModal = () => {
-  //   setShowModal(prevState => !prevState);
-  // };
-
-  // const closeModal = () => {
-  //   setShowModal(prevState => !prevState);
-  //   setActive(!active)
-  // };
 
   const openMenuBurger = () => {
     setActive(!active)
@@ -50,16 +45,18 @@ const Header = () => {
         <Navbar />
         <Networks /> 
       </div>
+      <LogoTab/>
+      <NetworksTab/>
       <button className={"header__menu-burger" + (active == true ? " isHidden" : "")} onClick={openMenuBurger}><BurgerSVG/></button>
       <button className={"header__menu-burger--close" + (active == true ? "" : " isHidden")} onClick={closeMenuBurger}><BurgerCloseSVG/></button>
       <div className={"container header__container__mob" + (active == true ? "--active" : "")}>
         <div className="header__wrapper">
-        <Logo /> 
-        <Navbar />
+          <Logo /> 
+          <Navbar />
         </div>
         <div className='header__wrapper'>
-        <Address />
-        <NetworksMob /> 
+          <Address />
+          <NetworksMob /> 
         </div>
       </div>
       {showModal && (

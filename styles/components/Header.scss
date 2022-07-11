@@ -51,6 +51,13 @@
       }
     }
   }
+  
+  &__logoTab {
+    display: none;
+  }
+  &__networksTab {
+    display: none;
+  }
 
   &__networks {
     display: flex;
@@ -117,6 +124,191 @@
   }
 }
 
+@media screen and (max-width: 1270px) {
+  .header {
+    height: 114px;
+    &.scrolled {
+      height: 114px;
+    }
+
+    &__logoTab {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      & svg {
+        width: 130px;
+        height: 40px;
+      }
+    }
+
+    &__networksTab {
+      display: flex;
+      position: absolute;
+      top: 38px;
+      right: 92px;
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%);
+        box-shadow: 0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+  
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        & svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__menu-burger {
+      position: absolute;
+      top: 38px;
+      right: 39px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      border: none;
+      cursor: pointer;
+      & svg {
+        width: 38px;
+        height: 38px;
+      }
+      &--close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 9999999999;
+      }
+      &--close.isHidden {
+        display: none;
+      }
+    }
+    &__menu-burger.isHidden {
+      display: none;
+    }
+    &__container__desc {
+        display: none;
+    }
+    &__container__mob {
+      display: block;
+      visibility: hidden;
+      pointer-events: none;
+      touch-action: none;
+      user-select:none;
+      opacity: 0;
+      right: -100%;
+      transition: all .35s ease;
+    }
+    &__container__mob--active {
+        position: absolute;
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 33%;
+        height: 100vh;
+        padding: 75px 25px 30px;
+        visibility: visible;
+        pointer-events: all;
+        touch-action: all;
+        opacity: 1;
+        right: 0;
+        top: 0;
+        transition: all .35s ease;
+    }
+
+    &__logo {
+      margin-bottom: 50px;
+      & svg {
+        width: 130px;
+        height: 40px;
+        & path {
+          fill: black;
+        }
+      }
+    }
+
+    &__nav__menu {
+      display: block;
+      &__item {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 19px;
+        }
+      }
+      &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black-color;
+
+        &:hover {
+          color: $orange-color;
+        }
+      }
+    }
+
+    &__address {
+      margin-bottom: 30px;
+      &--text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $black-color;
+        text-align: start;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &__networks {
+      display: flex;
+      grid-gap: 0;
+    &__item {
+      box-shadow: none;
+      width: 27px;
+      height: 27px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      & svg {
+        width: 16px;
+      }
+    }
+    &__link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+}
+
 @media screen and (max-width: 767px) {
 .header {
     position: fixed;
@@ -134,6 +326,10 @@
           border-color: $black-color transparent transparent transparent;
         }
       }
+    }
+    
+    &__logoTab {
+      display: none;
     }
 
     &__menu-burger {
@@ -237,6 +433,9 @@
           margin-bottom: 15px;
         }
       }
+    }
+    &__networksTab {
+      display: none;
     }
 
     &__networks {
