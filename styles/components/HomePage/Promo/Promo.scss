@@ -46,6 +46,7 @@
   }
 
   &__title {
+    font-family: 'RoadRadio';
     font-size: 95.625px;
     line-height: 96px;
     text-align: center;
@@ -95,6 +96,7 @@
           color: $white-color;
           background: linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%);
           box-shadow: 0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+          cursor: pointer;
           &:hover {
             border: 2px solid $orange-color;
           background: $transparent;
@@ -109,6 +111,7 @@
           text-transform: uppercase;
           background: linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%);
           box-shadow: 0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+          cursor: pointer;
           &:hover {
             border: 2px solid $orange-color;
             background: $transparent;
@@ -437,18 +440,18 @@
       padding: 0 10px;
       &::before {
         position: absolute;
-        top: 22%;
+        top: 50%;
         width: 2px;
-        height: 87px;
+        height: 45px;
         background-color: $orange-color;
         content: '';
       }
 
       &::after {
         position: absolute;
-        bottom: -43%;
+        bottom: -13%;
         width: 2px;
-        height: 115px;
+        height: 45px;
         right: 10px;
         background-color: $orange-color;
         content: '';

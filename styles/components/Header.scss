@@ -42,6 +42,7 @@
       }
     }
     &__link {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 25px;
       line-height: 38px;
@@ -106,6 +107,7 @@
         }
       }
       &__link {
+        font-family: 'Roboto';
         font-size: 20px;
         line-height: 23px;
         color: $white-color;
@@ -272,6 +274,7 @@
     &__address {
       margin-bottom: 30px;
       &--text {
+        font-family: 'Roboto';
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
