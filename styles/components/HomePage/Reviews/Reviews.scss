@@ -266,9 +266,9 @@
   
 }
 
-@media screen and(max-width: 767px) {
+@media screen and(max-width: 800px) {
   .reviews {
-    padding: 40px 60px 230px;
+    padding: 40px 60px 100px;
     overflow: hidden;
     &__title {
       color: $black-color;
