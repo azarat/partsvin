@@ -65,7 +65,7 @@ const Troubleshooting = () => {
   }
 
   return (
-    <section className='troubleshooting'>
+    <section className='troubleshooting' id='troubleshooting'>
       <div className="container troubleshooting__container">
         <div className="troubleshooting__container--bg"></div>
         <form className="troubleshooting__form">

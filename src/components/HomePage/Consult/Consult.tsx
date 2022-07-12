@@ -64,7 +64,7 @@ const Consult = () => {
   }
 
   return (
-    <section className='consult'>
+    <section className='consult' id="consult">
       <div className="container consult__container">
         <div className="consult__container--bg"></div>
         <div className="consult__text">
