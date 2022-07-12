@@ -1,51 +1,8 @@
 
 @import './variables/variables';
+@import '../public/fonts/Roboto/stylesheet.css';
+@import '../public/fonts/RoadRadio/stylesheet.css';
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto.eot');
-  src: local('Roboto Regular'), local('Roboto.1-Regular'),
-      url('/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/Roboto-Regular.woff2') format('woff2'),
-      url('/fonts/Roboto-Regular.woff') format('woff'),
-      url('/fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Bold.eot');
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-      url('/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/Roboto-Bold.woff2') format('woff2'),
-      url('/fonts/Roboto-Bold.woff') format('woff'),
-      url('/fonts/Roboto-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'RoadRadio';
-  src: url('/fonts/RoadRadio-Bold.eot');
-  src: local('Roboto Bold'), local('RoadRadio-Bold'),
-      url('/fonts/RoadRadio-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/RoadRadio-Bold.woff2') format('woff2'),
-      url('/fonts/RoadRadio-Bold.woff') format('woff'),
-      url('/fonts/RoadRadio-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'RoadRadio';
-  src: url('/fonts/roadRadio.ttf');
-  src: local('RoadRadio Regular'), local('RoadRadio-Regular'),
-      url('/fonts/roadRadio.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 * {
   box-sizing: border-box;
