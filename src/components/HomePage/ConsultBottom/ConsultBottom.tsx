@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Modal from '../Modal/Modal'
 import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
+import InputMask from 'react-input-mask'
 
 const ConsultBottom = () => {
   const [errors, setErrors] = useState<string[]>([])
@@ -22,7 +23,7 @@ const ConsultBottom = () => {
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }
@@ -36,9 +37,6 @@ const ConsultBottom = () => {
         name,
         phone,
         type: connectType,
-        // initialLink: localStorage
-        // ? localStorage.getItem('url')
-        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -88,15 +86,11 @@ const ConsultBottom = () => {
           />
         </span>
         <span className="consultBottom__form__thumb">
-          <input
-          type="text"
-          className={`consultBottom__form-input ${
-            errors.includes('phone') ? 'consultBottom__form-input--error' : ''
-          }`}
-          placeholder="Ваш телефон"
+          <InputMask className={`consult__form-input ${
+            errors.includes('phone') ? 'consult__form-input--error' : ''
+          }`} mask="+380\(99) 999-99-99"  placeholder="Ваш телефон"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          />
+          onChange={(e:any) => setPhone(e.target.value)}/>
         </span>
       </div>
       <div className="consultBottom__form-checkbox-wrappers">

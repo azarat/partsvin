@@ -38,8 +38,9 @@ const Promo = () => {
         <h1 className="promo__title">Все, що потрібно для вашого автомобіля</h1>
           <p className="promo__top-text  section__text"> <span className='orange-text'>Витратники</span> обслуговування авто. Від гвинтика до олії <TopLine className="promo__top-line"/></p>
           
-     
-          <button className="promo__buttons__item--left section__text">Дізнатися ціни</button>
+          <Link href="/#consult"><button className="promo__buttons__item--left section__text">Дізнатись ціни</button></Link>
+          
+          
           
           <div className="promo__image">
             <Image
@@ -50,8 +51,8 @@ const Promo = () => {
               alt='car'
               />
           </div>
-          <button className="promo__buttons__item--right section__text">Отримати дефектування безкоштовно</button>
-
+          
+          <Link href="/#troubleshooting"><button className="promo__buttons__item--right section__text">Отримати дефектування безкоштовно</button></Link>
           <p className="promo__bottom-text section__text"> 
             <BotLine className="promo__bot-line"/>
             <span className='orange-text'>Кузовні запчастини</span> для ремонту авто з будь-якими пошкодженнями</p>

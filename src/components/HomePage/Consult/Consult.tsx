@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Modal from '../Modal/Modal'
 import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
+import InputMask from 'react-input-mask'
 
 
 const Consult = () => {
@@ -23,7 +24,7 @@ const Consult = () => {
   const validate = (): string[] => {
     const initErrors: string[] = []
     if (name.length < 2) initErrors.push('name')
-    // if (!numberRegEpx.test(phone)) initErrors.push('phone')
+    if (!numberRegEpx.test(phone)) initErrors.push('phone')
     setErrors([...initErrors])
     return initErrors
   }
@@ -87,15 +88,11 @@ const Consult = () => {
           />
         </span>
         <span className="consult__form__thumb">
-          <input
-          type="text"
-          className={`consult__form-input ${
+           <InputMask className={`consult__form-input ${
             errors.includes('phone') ? 'consult__form-input--error' : ''
-          }`}
-          placeholder="Ваш телефон"
+          }`} mask="+380\(99) 999-99-99"  placeholder="Ваш телефон"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          />
+          onChange={(e:any) => setPhone(e.target.value)}/>
         </span>
       </div>
       <div className="consult__form-checkbox-wrappers">
