@@ -4,7 +4,10 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
+  }
+
+  &__containerTab {
+    display: none;
   }
 
   &__nav__menu {
@@ -14,6 +17,7 @@
     grid-column-gap: 95px;
 
     &__link {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 25px;
       line-height: 38px;
@@ -26,6 +30,7 @@
 
   &__address {
     &--text {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 20px;
       line-height: 23px;
@@ -63,7 +68,7 @@
   }
 }
 
-@media screen and(max-width: 1520px) {
+@media screen and(max-width: 1600px) {
   .footer {
     padding: 30px;
 
@@ -103,7 +108,74 @@
   }
 }
 
-@media screen and(max-width: 767px) {
+@media screen and(max-width: 1270px) {
+  .footer {
+    padding: 30px 0;
+    &__container {
+      display: none;
+    }
+
+    &__containerTab {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__logo {
+      & svg {
+        width: 130px;
+        height: 40px;
+      }
+    }
+    &__nav__menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 25px;
+      grid-column-gap: 105px;
+  
+      &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  
+    &__address {
+      &--text {
+        width: 190px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  
+    &__networks {
+      display: flex;
+      grid-gap: 0;
+      grid-template-columns: none;
+      height: auto;
+      &__item {
+        &:not(:last-child) {
+         margin-right: 10px;
+        }
+        width: 27px;
+        height: 27px;
+        & svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }  
+}
+
+@media screen and(max-width: 800px) {
   .footer {
     background-color: $dark-grey-color;
     padding: 10px 10px 40px;
@@ -112,7 +184,11 @@
       flex-direction: column;
       align-items: center;
     }
-    
+
+    &__containerTab {
+      display: none;
+    }
+
     &__logo {
      
       margin-bottom: 20px;

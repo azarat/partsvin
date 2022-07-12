@@ -154,6 +154,15 @@ const ConsultBottom = () => {
               alt='car'
               />
           </div>
+          <div className="consultBottom__image--tab">
+            <Image
+              className=""
+              src="/assets/images/details-tab.png"
+              layout="fill"
+              objectFit="contain"
+              alt='car'
+              />
+          </div>
           <div className="consultBottom__image--mob">
             <Image
               className=""

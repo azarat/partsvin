@@ -3,42 +3,48 @@
   padding-top: 60px;
   padding-bottom: 70px;
 
- 
+  &::after {
+    position: absolute;
+    top: 22%;
+    right: 0;
+    background-image: url('../../../../public/assets/images/work-process.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 35%;
+    z-index: -1;
+    height: 918px;
+    background-color: #202020;
+    content: '';
+  }
 
   &__title {
     color: $black-color;
     margin-bottom: 50px;
   }
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__image {
-    position: relative;
-    transform: translate(0, 0%);
-    background-color: $dark-grey-color;
-    min-width: 590px;
-    height: 918px;
-    // right: 200px;
-  }
   &__cards {
+
+    &::before {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: -100%;
+      background-color: $orange-color;
+      content: '';
+    }
+
     position: relative;
-    // right: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    min-width: 1330px;
-    padding: 71px 0;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 377px 427px;
+    grid-row-gap: 158px;
+    grid-column-gap: 126px;
+    padding: 71px 0 60px;
     background-color: $orange-color;
     &__item {
       position: relative;
-      &:not(:last-child) {
-        margin-bottom: 115px;
-      }
       &:nth-child(1) {
-        padding-left: 199px;
         &::after {
           position: absolute;
           right: -90px;
@@ -53,11 +59,10 @@
         }
       }
       &:nth-child(2) {
-        padding-left: 132px;
         &::after {
           position: absolute;
-          right: -30%;
-          top: 60px;
+          right: -49%;
+          top: 81px;
           border: 1px solid $white-color;
           width: 99px;
           content: '';
@@ -65,7 +70,6 @@
         
       }
       &:nth-child(3) {
-        padding-left: 199px;
         &::after {
           position: absolute;
           right: -90px;
@@ -80,7 +84,8 @@
         }
         &::before {
           position: absolute;
-          left: 0;
+          left: -65px;
+          transform: translate(-100%, 0);
           top: 60px;
           background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
           background-position: center;
@@ -94,16 +99,14 @@
       &:nth-child(4) {
         &::after {
           position: absolute;
-          right: -30%;
+          right: -49%;
           top: 60px;
           border: 1px solid $white-color;
           width: 284px;
           content: '';
         }
-        padding-left: 132px;
       }
       &:nth-child(5) {
-        padding-left: 199px;
         margin-bottom: 0;
         &::after {
           position: absolute;
@@ -120,7 +123,8 @@
 
         &::before {
           position: absolute;
-          left: 0;
+          left: -65px;
+          transform: translate(-100%, 0);
           top: 60px;
           background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
           background-position: center;
@@ -131,12 +135,8 @@
           content: '';
         }
       }
-      &:nth-child(6) {
-        padding-left: 132px;
-       
-      }
-      width: 580px;
       &--num {
+        font-family: 'RoadRadio';
         font-weight: 700;
         font-size: 30px;
         line-height: 30px;
@@ -144,6 +144,7 @@
         margin-bottom: 10px;
       }
       &--title {
+        font-family: 'RoadRadio';
         font-weight: 700;
         font-size: 35px;
         line-height: 40px;
@@ -159,75 +160,140 @@
 
 
 
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1600px) {
   .workProcess {
     padding-bottom: 74px;
+
+    &::after {
+      position: absolute;
+      top: 22%;
+      right: 0;
+      background-image: url('../../../../public/assets/images/work-process.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 35%;
+      z-index: -1;
+      height: 808px;
+      content: '';
+    }
 
     &__title {
       margin-bottom: 60px;
     }
-    &__image {
-      min-width: 370px;
-      height: 808px;
-    }
+
     &__cards {
-      min-width: 1070px;
-      padding: 60px 0;
-      &__item {
-        position: relative;
-        &:not(:last-child) {
-          margin-bottom: 90px;
+
+    &::before {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: -100%;
+      background-color: $orange-color;
+      content: '';
+    }
+
+    position: relative;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 311px 404px;
+    grid-row-gap: 115px;
+    grid-column-gap: 90px;
+    padding: 60px 0 60px;
+    background-color: $orange-color;
+    &__item {
+      position: relative;
+      &:nth-child(1) {
+        &::after {
+          position: absolute;
+          right: -72px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
         }
-        &:nth-child(1) {
-          &::after {
-            width: 55px;
-            height: 8px;
-            content: '';
-          }
+      }
+      &:nth-child(2) {
+        &::after {
+          position: absolute;
+          right: -23%;
+          top: 60px;
+          border: 1px solid $white-color;
+          width: 55px;
+          content: '';
         }
-        &:nth-child(3) {
-          &::after {
-            
-            width: 55px;
-            height: 8px;
-            content: '';
-          }
+        
+      }
+      &:nth-child(3) {
+        &::after {
+          position: absolute;
+          right: -72px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
         }
-        &:nth-child(4) {
-          &::after {
-            position: absolute;
-            right: -30%;
-            top: 60px;
-            width: 99px;
-            content: '';
-          }
+        &::before {
+          position: absolute;
+          left: -65px;
+          transform: translate(-100%, 0);
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 130px;
+          height: 12px;
+          content: '';
         }
-        &:nth-child(5) {
-          margin-bottom: 0;
-          &::after {
-            width: 55px;
-            height: 8px;
-            content: '';
-          }
-  
-          &::before {
-            position: absolute;
-            left: 0;
-            top: 60px;
-            background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 130px;
-            height: 12px;
-            content: '';
-          }
+      }
+      &:nth-child(4) {
+        &::after {
+          position: absolute;
+          right: -23%;
+          top: 60px;
+          border: 1px solid $white-color;
+          width: 55px;
+          content: '';
         }
-        &:nth-child(6) {
-          padding-left: 132px;
-         
+      }
+      &:nth-child(5) {
+        margin-bottom: 0;
+        &::after {
+          position: absolute;
+          right: -72px;
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80px;
+          height: 12px;
+          content: '';
         }
-        width: 475px;
+
+        &::before {
+          position: absolute;
+          left: -65px;
+          transform: translate(-100%, 0);
+          top: 60px;
+          background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 130px;
+          height: 12px;
+          content: '';
+        }
+      }
         &--title {
           font-weight: 700;
           font-size: 30px;
@@ -239,25 +305,189 @@
   }  
 }
 
+@media screen and (max-width: 1270px) {
+  .workProcess {
+    padding-top: 40px;
+    padding-bottom: 405px;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      top: auto;
+      right: 50%;
+      bottom: 40px;
+      transform:  translate(50%, 0);
+      background-image: url('../../../../public/assets/images/work-process.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 664px;
+      z-index: -1;
+      width: 664px;
+      height: 365px;
+      content: '';
+    }
+  
+    &__title {
+      color: $black-color;
+      margin-bottom: 50px;
+    }
+  
+    &__cards {
+  
+      &::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: -99%;
+        background-color: $orange-color;
+        content: '';
+      }
+      &::after {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: -50%;
+        background-color: $orange-color;
+        z-index: -5;
+        content: '';
+      }
+  
+      position: relative;
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 244px 260px;
+      grid-row-gap: 30px;
+      grid-column-gap: 115px;
+      padding: 30px 0;
+      &__item {
+        &:nth-child(1) {
+          &::after {
+            position: absolute;
+            right: -90px;
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 80px;
+            height: 12px;
+            content: '';
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            position: absolute;
+            left: 20%;
+            transform: translate(100%, 0);
+            top: 60px;
+            border: 1px solid $white-color;
+            width: 100%;
+            content: '';
+          }
+          
+        }
+        &:nth-child(3) {
+          &::after {
+            position: absolute;
+            right: -90px;
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 80px;
+            height: 12px;
+            content: '';
+          }
+          &::before {
+            position: absolute;
+            left: -65px;
+            transform: translate(-100%, 0);
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 130px;
+            height: 12px;
+            content: '';
+          }
+        }
+        &:nth-child(4) {
+          &::after {
+            position: absolute;
+            left: 20%;
+            transform: translate(100%, 0);
+            top: 60px;
+            border: 1px solid $white-color;
+            width: 100%;
+            content: '';
+          }
+        }
+        &:nth-child(5) {
+          margin-bottom: 0;
+          &::after {
+            position: absolute;
+            right: -90px;
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 80px;
+            height: 12px;
+            content: '';
+          }
+  
+          &::before {
+            position: absolute;
+            left: -65px;
+            transform: translate(-100%, 0);
+            top: 60px;
+            background-image: url('../../../../public/assets/svg/arrow-work-l.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 130px;
+            height: 12px;
+            content: '';
+          }
+        }
+        &--num {
+          font-size: 21px;
+          line-height: 21px;
+        }
+        &--title {
+          font-size: 21px;
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }  
+}
 
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .workProcess {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 0;
+    padding-bottom: 32px;
 
     &::before {
       position: absolute;
-      background-image: url('../../../../public/assets/svg/overlap-black.svg');
+      background-image: url('../../../../public/assets/svg/overlay-mob-process.svg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 1;
       width: 100%;
-      height: 15%;
+      height: 10%;
       bottom: 0;
       content: '';
+    }
+    &::after { 
+      display: none;
     }
 
     &__title {
@@ -296,6 +526,7 @@
             border: 0;
             right: auto;
             top: auto;
+            left: auto;
             bottom: -50px;
             width: 5px;
             height: 39px;
@@ -325,6 +556,7 @@
             border: 0;
             right: auto;
             top: auto;
+            left: auto;
             bottom: -50px;
             width: 5px;
             height: 39px;

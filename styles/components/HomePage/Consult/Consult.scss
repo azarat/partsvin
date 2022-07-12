@@ -39,7 +39,9 @@
   &__image--mob {
     display: none;
   }
-
+  &__image--tab {
+    display: none;
+  }
   &__form {
     display: flex;
     flex-direction: column;
@@ -66,11 +68,13 @@
       padding: 17px 23px;
       outline: none;
       color: $white-color;
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 25px;
       line-height: 29px;
       cursor: pointer;
       &::placeholder {
+        font-family: 'Roboto';
         font-weight: 400;
         font-size: 25px;
         line-height: 29px;
@@ -94,6 +98,7 @@
       display: flex;
       align-items: center;
       color: $white-color;
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 25px;
       line-height: 29px;
@@ -126,6 +131,7 @@
       width: 295px;
       height: 75px;
       color: $white-color;
+      font-family: 'Roboto';
       font-weight: 700;
       font-size: 25px;
       line-height: 29px;
@@ -154,6 +160,7 @@
       margin: 0 auto 50px;
     }
     &__title {
+      font-family: 'RoadRadio';
       font-weight: 400;
       font-size: 95.625px;
       line-height: 96px;
@@ -163,6 +170,7 @@
       margin-bottom: 30px;
     }
     &__pre-title {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 40px;
       line-height: 40px;
@@ -172,6 +180,7 @@
       margin-bottom: 70px;
     }
     &__text {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 35px;
       line-height: 52px;
@@ -183,7 +192,7 @@
 
 
 
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1600px) {
   .consult {
     &__container {
       padding: 50;
@@ -267,9 +276,128 @@
   }
 }
 
+@media screen and (max-width: 1270px) {
+  .consult {
+    padding: 40px 0;
+    &__container {
+      display: block;
+      padding: 40px 50px;
+      
+      &--bg {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        background: rgba(255, 169, 81, 0.6);
+        filter: blur(150px);
+      }
+    }
+    &__text {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &__title {
+      text-align: start;
+      margin-bottom: 15px;
+    }
+    &__description {
+      width: 100%;
+      margin-left: auto;
+    }
+    &__image--desc {
+      display: none;
+    }
+    &__image--tab {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 291px;
+      width: 342px;
+    }
+    
+    &__image--mob {
+      display: none;
+    }
+  
+    &__form {
+      width: 353px;
+      min-width: 353px;
+      margin-left: auto;
+      &__input-wrapper {
+        margin-bottom: 20px;
+      }
+      &__thumb {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+      &-input {
+        width: 100%;
+        height: 60px;
+        padding: 20px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        &::placeholder {
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
+      &-checkbox-wrappers {
+        margin-bottom: 30px;
+      }
+  
+      &-label {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        &::before {
+          min-width: 17px;
+          height: 17px;
+          margin-right: 10px;
+          content: '';
+        }
+      }
+      &-btn {
+        padding: 24px;
+        width: 275px;
+        height: 71px;
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+    &__modal {
+      width: 668px;
+      height: 499px;
+      padding: 60px;
+  
+      &__svg {
+        margin: 0 auto 40px;
+      }
+      &__title {
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 55px;
+        margin-bottom: 22px;
+      }
+      &__pre-title {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 60px;
+      }
+      &__text {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+  }
+}
 
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .consult {
     padding: 0 0 30px 0;
    
@@ -298,6 +426,9 @@
       margin-bottom: 30px;
     }
     &__image--desc {
+      display: none;
+    }
+    &__image--tab {
       display: none;
     }
     &__image--mob {

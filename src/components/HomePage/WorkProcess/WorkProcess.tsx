@@ -8,7 +8,6 @@ const WorkProcess = () => {
     <section className='workProcess' id='workProcess'>
       <div className="container workProcess__container">
         <h2 className='title workProcess__title'>Процес роботи</h2>
-        <div className="workProcess__wrapper">
         <ul className="workProcess__cards">
           {WorkProccesCards.map(({ id, num, title, text}) => (
             <li key={id} className="workProcess__cards__item">
@@ -19,15 +18,14 @@ const WorkProcess = () => {
           ))
           }
         </ul>
-        <div className="workProcess__image">
+        {/* <div className="workProcess__image">
           <Image
            src="/assets/images/work-process-carq.png"
            layout="fill"
            objectFit="cover"
            alt='car'
           />
-        </div>
-        </div>
+        </div> */}
       </div>
       
     </section>

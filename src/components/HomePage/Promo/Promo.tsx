@@ -3,6 +3,7 @@ import LeftLine from '../../../assets/svg/promo-left-line.svg'
 import RightLine from '../../../assets/svg/promo-right-line.svg'
 import TopLine from '../../../assets/svg/promo-top-mob.svg'
 import BotLine from '../../../assets/svg/promo-bot-mob.svg'
+import Link from 'next/link'
 
 const Promo = () => {
 
@@ -18,8 +19,8 @@ const Promo = () => {
           <span className='orange-text'>Кузовні запчастини</span> для ремонту авто з будь-якими пошкодженнями</p>
         </div>
         <div className="promo__buttons">
-          <button className="promo__buttons__item--left section__text">Дізнатися ціни</button>
-          <button className="promo__buttons__item--right section__text">Отримати дефектування безкоштовно</button>
+          <Link href="/#consult"><button className="promo__buttons__item--left section__text">Дізнатись ціни</button></Link>
+          <Link href="/#troubleshooting"><button className="promo__buttons__item--right section__text">Отримати дефектування безкоштовно</button></Link>
         </div>
         
           <div className="promo__bg--image">

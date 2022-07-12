@@ -38,9 +38,6 @@ const Troubleshooting = () => {
         name,
         phone,
         type: connectType,
-        // initialLink: localStorage
-        // ? localStorage.getItem('url')
-        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -68,7 +65,7 @@ const Troubleshooting = () => {
   }
 
   return (
-    <section className='troubleshooting'>
+    <section className='troubleshooting' id='troubleshooting'>
       <div className="container troubleshooting__container">
         <div className="troubleshooting__container--bg"></div>
         <form className="troubleshooting__form">
@@ -153,6 +150,15 @@ const Troubleshooting = () => {
               src="/assets/images/troubleshooting-car-mob.png"
               layout="fill"
               objectFit="contain"
+              alt='car'
+              />
+          </div>
+          <div className="troubleshooting__image--tab">
+            <Image
+              className=""
+              src="/assets/images/troubleshooting-car-tab.png"
+              layout="fill"
+              objectFit="cover"
               alt='car'
               />
           </div>

@@ -1,6 +1,52 @@
 
 @import './variables/variables';
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto.eot');
+  src: local('Roboto Regular'), local('Roboto.1-Regular'),
+      url('/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Roboto-Regular.woff2') format('woff2'),
+      url('/fonts/Roboto-Regular.woff') format('woff'),
+      url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+      url('/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Roboto-Bold.woff2') format('woff2'),
+      url('/fonts/Roboto-Bold.woff') format('woff'),
+      url('/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RoadRadio';
+  src: url('/fonts/RoadRadio-Bold.eot');
+  src: local('Roboto Bold'), local('RoadRadio-Bold'),
+      url('/fonts/RoadRadio-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/RoadRadio-Bold.woff2') format('woff2'),
+      url('/fonts/RoadRadio-Bold.woff') format('woff'),
+      url('/fonts/RoadRadio-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RoadRadio';
+  src: url('/fonts/roadRadio.ttf');
+  src: local('RoadRadio Regular'), local('RoadRadio-Regular'),
+      url('/fonts/roadRadio.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,16 +94,20 @@ html {
   width: 1520px;
 
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     width: 1200px;
   }
-  @media screen and(max-width: 767px) {
+  @media screen and(max-width: 1270px) {
+    width: 774px;
+  }
+  @media screen and(max-width: 800px) {
     width: 100%;
   }
   
 }
 
 .pre-title {
+  font-family: 'RoadRadio';
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
@@ -67,11 +117,17 @@ html {
   text-transform: uppercase;
 
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 45px;
   }
 
-  @media screen and(max-width: 767px) {
+  @media screen and(max-width: 1270px) {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  @media screen and(max-width: 800px) {
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
@@ -80,6 +136,7 @@ html {
 }
 
 .title {
+  font-family: 'RoadRadio';
   font-weight: 400;
   font-size: 60px;
   line-height: 70px;
@@ -87,12 +144,17 @@ html {
   color: $white-color;
   text-transform: uppercase;
   
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 50px;
   }
 
+  @media screen and(max-width: 1270px) {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+  }
   
-  @media screen and(max-width: 767px) {
+  @media screen and(max-width: 800px) {
     font-weight: 400;
     font-size: 25px;
     line-height: 30px;
@@ -100,15 +162,22 @@ html {
 }
 
 .section__text {
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
   color: $white-color;
-  @media screen and(max-width: 1520px) {
+  @media screen and(max-width: 1600px) {
     font-size: 20px;
   }
+
+  @media screen and(max-width: 1270px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
   
-  @media screen and(max-width: 767px) {
+  @media screen and(max-width: 800px) {
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;

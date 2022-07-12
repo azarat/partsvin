@@ -26,7 +26,7 @@
 }
 
 
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1600px) {
   .danger {
     padding-bottom: 60px;
     &__title {
@@ -48,7 +48,36 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1270px) {
+  .danger {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  
+    &__title {
+      width: 578px;
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+    &__cards {
+      &__item {
+        width: 250px;
+        padding: 20px;
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+        & svg {
+          width: 48px;
+          height: 36px;
+        }
+        &-text {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
   .danger {
     padding-top: 30px;
     padding-bottom: 20px;

@@ -37,9 +37,6 @@ const Consult = () => {
         name,
         phone,
         type: connectType,
-        // initialLink: localStorage
-        // ? localStorage.getItem('url')
-        // : false,
       };
 
       const JSONdata = JSON.stringify(data)
@@ -67,7 +64,7 @@ const Consult = () => {
   }
 
   return (
-    <section className='consult'>
+    <section className='consult' id="consult">
       <div className="container consult__container">
         <div className="consult__container--bg"></div>
         <div className="consult__text">
@@ -153,6 +150,15 @@ const Consult = () => {
               src="/assets/images/details-consult.png"
               layout="fill"
               objectFit="cover"
+              alt='car'
+              />
+          </div>
+          <div className="consult__image--tab">
+            <Image
+              className=""
+              src="/assets/images/details-tab.png"
+              layout="fill"
+              objectFit="contain"
               alt='car'
               />
           </div>

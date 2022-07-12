@@ -18,6 +18,7 @@
       }
       &-title {
         position: relative;
+        font-family: 'RoadRadio';
         font-weight: 700;
         font-size: 35px;
         line-height: 40px;
@@ -65,7 +66,7 @@
   }
 }
 
-@media screen and(max-width: 1520px) {
+@media screen and(max-width: 1600px) {
   .faq {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -109,7 +110,51 @@
   }
 }
 
-@media screen and(max-width: 767px) {
+@media screen and (max-width: 1270px) {
+  .faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    &__title {
+      margin-bottom: 40px;
+    }
+  
+    &__accordion {
+      &-item {
+        padding: 20px 30px;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+        &-title {
+          font-size: 25px;
+          line-height: 40px;
+          &::after {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            content: '';
+          }
+        }
+        &-text {
+          width: 611px;
+        }
+        &--open {
+          padding-bottom: 20px;
+          
+          & .faq__accordion-item-text {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 800px) {
   .faq {
     position: relative;
     padding: 40px 10px 60px;
