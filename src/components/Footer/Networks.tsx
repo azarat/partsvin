@@ -8,22 +8,22 @@ const Networks = () => {
   return (
       <ul className="footer__networks">
           <li className="footer__networks__item">
-            <a className='footer__networks__link' target="_blank" href='/' rel="noreferrer">
+            <a className='footer__networks__link' target="_blank" href="https://instagram.com/partsvin?igshid=YmMyMTA2M2Y=" rel="noreferrer">
               <InstagramSVG />
             </a>
           </li>
           <li className="footer__networks__item">
-            <a className='footer__networks__link' target="_blank" href='/' rel="noreferrer">
+            <a className='footer__networks__link' target="_blank" href="https://skobelkin.ru/viber/0687454269" rel="noreferrer">
               <ViberSVG />
             </a>
           </li>
           <li className="footer__networks__item">
-            <a className='footer__networks__link' target="_blank" href='/' rel="noreferrer">
+            <a className='footer__networks__link' target="_blank" href='https://m.facebook.com/partsvin#_=_' rel="noreferrer">
               <FacebookSVG />
             </a>
           </li>
           <li className="footer__networks__item">
-            <a className='footer__networks__link' target="_blank" href='/' rel="noreferrer">
+            <a className='footer__networks__link' href='tel:+380687454269' rel="noreferrer">
               <PhoneSVG />
             </a>
           </li>
