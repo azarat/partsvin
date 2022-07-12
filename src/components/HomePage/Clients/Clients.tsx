@@ -16,8 +16,8 @@ const Clients = () => {
             <li key={id} className={"clients__cards__item" + (active == true ? " odd" : " even") }>
               <div className="clients__cards__item--image">
               <ImgComparisonSlider>
-                <img slot="first" src={image_1}  />
-                <img slot="second" src={image_2} />
+                <img slot="first" src={image_1} alt=''/>
+                <img slot="second" src={image_2} alt=''/>
                 <div slot="handle" className='handler'></div>
               </ImgComparisonSlider>
               </div>
