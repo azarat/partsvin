@@ -13,8 +13,8 @@ const ClientsCars = [
   },
   {
     id: 3,
-    image_1: '/assets/images/clients-3-1.1.jpg',
-    image_2: '/assets/images/clients-3-2.1.jpg',
+    image_1: '/assets/images/clients-3-1.jpg',
+    image_2: '/assets/images/clients-3-2.jpg',
     model: 'Jeep Renegade'
   },
   {
