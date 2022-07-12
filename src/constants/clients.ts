@@ -7,8 +7,8 @@ const ClientsCars = [
   },
   {
     id: 2,
-    image_1: '/assets/images/clients-2-1.jpg',
-    image_2: '/assets/images/clients-2-2.jpg',
+    image_1: '/assets/images/clients-2-1.1.jpg',
+    image_2: '/assets/images/clients-2-2.1.jpg',
     model: 'Volkswagen jetta'
   },
   {
