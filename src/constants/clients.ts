@@ -19,8 +19,8 @@ const ClientsCars = [
   },
   {
     id: 4,
-    image_1: '/assets/images/clients-4-1.1.jpg',
-    image_2: '/assets/images/clients-4-2.1.png',
+    image_1: '/assets/images/clients-4-1.jpg',
+    image_2: '/assets/images/clients-4-2.png',
     model: 'Lexus RX'
   },
 ]
