@@ -1,0 +1,173 @@
+.storage {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: $dark-grey-color;
+  &__title {
+    width: 736px;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image--desc {
+    position: relative;
+    width: 1110px;
+    height: 639px;
+  }
+  &__image--mob {
+    display: none;
+  }
+  &__description {
+    background-color: $white-color;
+    padding: 49px 100px;
+    min-width: 810px;
+
+    &__title {
+      font-family: 'RoadRadio';
+      color: $black-color;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      width: 433px;
+    }
+    &__text {
+      color: $black-color;
+      width: 510px;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  .storage {
+    padding-bottom: 60px;
+    &__title {
+      width: 679px;
+      margin: 0 auto 60px;
+    }
+    &__image--desc {
+      width: 858px;
+      height: 517px;
+    }
+    &__description {
+      padding: 40px 70px;
+      min-width: 582px;
+
+      &__title {
+        font-size: 30px;
+        line-height: 35px;
+        width: 228px;
+      }
+      &__text {
+        width: 399px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .storage {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__title {
+      margin: 0 auto 40px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__image--desc {
+      position: relative;
+      width: 100%;
+      height: 503px;
+    }
+    &__image--mob {
+      display: none;
+    }
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      min-width: auto;
+      width: 649px;
+  
+      &__title {
+        font-size: 21px;
+        line-height: 30px;
+        width: 243px;
+      }
+      &__text {
+        width: 243px;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .storage {
+    position: relative;
+    padding: 30px 10px;
+    background-color: $dark-grey-color;
+    &__title {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 20px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &__image--desc {
+      display: none;
+    }
+    &__image--mob {
+      position: relative;
+      order: 2;
+      display: block;
+      width: calc(100% + 20px);
+      margin: -10px;
+      height: 252px;
+    }
+    &__description {
+      order: 1;
+      display: block;
+      background-color: $white-color;
+      padding: 32px 15px 12px;
+      min-width: 100%;
+      width: 100%;
+      z-index: 2;
+      &__title {
+        color: $black-color;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      &__text {
+        color: $black-color;
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+

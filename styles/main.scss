@@ -1,9 +1,8 @@
-@import './variables/variables';
 
-// Components
-@import './components/Header';
-@import './components/Footer';
-@import './components/HomePage/Promo/Promo.scss';
+@import './variables/variables';
+@import '../public/fonts/Roboto/stylesheet.css';
+@import '../public/fonts/RoadRadio/stylesheet.css';
+
 
 * {
   box-sizing: border-box;
@@ -50,9 +49,22 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 1520px;
+
+  
+  @media screen and(max-width: 1600px) {
+    width: 1200px;
+  }
+  @media screen and(max-width: 1270px) {
+    width: 774px;
+  }
+  @media screen and(max-width: 800px) {
+    width: 100%;
+  }
+  
 }
 
-.section__pre-title {
+.pre-title {
+  font-family: 'RoadRadio';
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
@@ -60,25 +72,99 @@ html {
   color: $black-color;
   color: $white-color;
   text-transform: uppercase;
+
+  
+  @media screen and(max-width: 1600px) {
+    font-size: 45px;
+  }
+
+  @media screen and(max-width: 1270px) {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  @media screen and(max-width: 800px) {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
 }
 
-.section__title {
+.title {
+  font-family: 'RoadRadio';
   font-weight: 400;
   font-size: 60px;
   line-height: 70px;
   text-align: center;
   color: $white-color;
   text-transform: uppercase;
+  
+  @media screen and(max-width: 1600px) {
+    font-size: 50px;
+  }
+
+  @media screen and(max-width: 1270px) {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  
+  @media screen and(max-width: 800px) {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 
 .section__text {
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
   color: $white-color;
+  @media screen and(max-width: 1600px) {
+    font-size: 20px;
+  }
+
+  @media screen and(max-width: 1270px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  @media screen and(max-width: 800px) {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 .orange-text {
   color: $orange-color;
   font-weight: 700;
 }
+
+
+// Components
+@import './components/Header';
+@import './components/Footer';
+@import './components/HomePage/Promo/Promo.scss';
+@import './components/HomePage/Consult/Consult.scss';
+@import './components/HomePage/Services/Services.scss';
+@import './components/HomePage/Danger/Danger.scss';
+@import './components/HomePage/Advantages/Advantages.scss';
+@import './components/HomePage/WorkProcess/WorkProcess.scss';
+@import './components/HomePage/Troubleshooting/Troubleshooting.scss';
+@import './components/HomePage/Logistic/Logistic.scss';
+@import './components/HomePage/Storage/Storage.scss';
+@import './components/HomePage/Clients/Clients.scss';
+@import './components/HomePage/Reviews/Reviews.scss';
+@import './components/HomePage/Faq/Faq.scss';
+@import './components/HomePage/ConsultBottom/ConsultBottom.scss';
+@import './components/Modal/Modal.scss';
+
+
+
+

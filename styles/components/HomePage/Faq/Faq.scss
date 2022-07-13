@@ -1,0 +1,217 @@
+.faq {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__title {
+    color: $black-color;
+    margin-bottom: 66px;
+  }
+
+  &__accordion {
+    &-item {
+      background-color: $dark-grey-color;
+      padding: 50px 60px;
+      cursor: pointer;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+      &-title {
+        position: relative;
+        font-family: 'RoadRadio';
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+          position: absolute;
+          top: 0s;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          background-image: url('../../../../public/assets/svg/cross.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+          content: '';
+        }
+      }
+      &-text {
+        display: block;
+        width: 954px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      &--open {
+        padding-bottom: 44px;
+        & .faq__accordion-item-title {
+          &::after {
+            transform: rotate(45deg);
+          }
+        }
+        & .faq__accordion-item-text {
+          max-height: 330px;
+          margin-top: 30px;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1600px) {
+  .faq {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    &__title {
+      margin-bottom: 60px;
+    }
+  
+    &__accordion {
+      &-item {
+        padding: 40px 50px;
+        &:not(:last-of-type) {
+          margin-bottom: 30px;
+        }
+        &-title {
+          font-size: 30px;
+          line-height: 40px;
+          &::after {
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            content: '';
+          }
+        }
+        &-text {
+          width: 802px;
+        }
+        &--open {
+          padding-bottom: 50px;
+          & .faq__accordion-item-title {
+            &::after {
+              transform: rotate(45deg);
+            }
+          }
+          & .faq__accordion-item-text {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    &__title {
+      margin-bottom: 40px;
+    }
+  
+    &__accordion {
+      &-item {
+        padding: 20px 30px;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+        &-title {
+          font-size: 25px;
+          line-height: 40px;
+          &::after {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            content: '';
+          }
+        }
+        &-text {
+          width: 611px;
+        }
+        &--open {
+          padding-bottom: 20px;
+          
+          & .faq__accordion-item-text {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 800px) {
+  .faq {
+    position: relative;
+    padding: 40px 10px 60px;
+  
+    &__title {
+      margin-bottom: 22px;
+    }
+  
+    &__accordion {
+      &-item {
+        padding: 14px 10px;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-bottom: 1px;
+        }
+        &-title {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 13px;
+          &::after {
+            position: absolute;
+            right: 0px;
+            width: 10px;
+            height: 10px;
+            background-image: url('../../../../public/assets/svg/cross.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+            content: '';
+          }
+        }
+        &-text {
+          width: 100%;
+          max-height: 0px;
+          overflow: hidden;
+          transition: all 0.5s ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+        &--open {
+          padding-left: 20px;
+          padding-bottom: 20px;
+          & .faq__accordion-item-title {
+            &::after {
+              transform: rotate(45deg);
+            }
+          }
+          & .faq__accordion-item-text {
+            max-height: 330px;
+            margin-top: 10px;
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
+}

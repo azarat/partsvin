@@ -1,0 +1,301 @@
+.logistic {
+  position: relative;
+  background-color: $dark-grey-color;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 465px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    &__image {
+      position: absolute;
+      width: 420px;
+      height: 280px;
+      top: 74px;
+      right: 550px;
+    }
+    &--left {
+      position: relative;
+      width: 550px;
+      height: 660px; 
+      padding: 30px 73px;
+      background: url('../../../../public/assets/images/logistic-inter.png');
+      background-repeat: no-repeat;
+      background-color: rgba(246, 156, 63, 0.85);
+      &-image {
+        position: absolute;
+        width: 694px;
+        height: 600px;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &--right {
+      position: relative;
+      width: 550px;
+      height: 660px; 
+      padding: 30px 73px;
+      background:  url('../../../../public/assets/images/logistic-ua.png');
+      background-color: rgba(246, 156, 63, 0.85);
+      background-repeat: no-repeat;
+      &-image {
+        position: absolute;
+        bottom: -15%;
+        right: 0;
+        width: 683px;
+        height: 463px;
+      }
+    }
+
+    &__title {
+      font-family: 'RoadRadio';
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $black-color;
+    }
+  }
+  &__text--bottom {
+    width: 830px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+}
+
+
+@media screen and (max-width: 1600px) {
+  .logistic {
+    &__text {
+      width: 347px;
+    }
+  
+    &__cards {
+      margin-bottom: 60px;
+      &__image {
+        width: 280px;
+        height: 216px;
+        top: 104px;
+        right: 460px;
+      }
+      &--left {
+        width: 460px;
+        height: 552px;
+        &-image {
+          width: 530px;
+          height: 458px;
+        }
+      }
+      &--right {
+        width: 460px;
+        height: 552px;
+        &-image {
+          width: 517px;
+          height: 346px;
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $black-color;
+      }
+    }
+    &__text--bottom {
+      width: 830px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 1270px)  {
+  .logistic {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    &__text {
+      width: 265px;
+      margin: 0 auto 40px;
+    }
+  
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 95px;
+      &__image {
+        position: relative;
+        width: 216px;
+        height: 216px;
+        transform: rotate(90deg);
+        top: auto;
+        right: auto;
+      }
+      &--left {
+        width: 466px;
+        height: 559px;
+        padding: 30px;
+        background: url('../../../../public/assets/images/logistic-inter.png');
+        background-repeat: no-repeat;
+        background-color: rgba(246, 156, 63, 0.85);
+        &-image {
+          position: absolute;
+          width: 511px;
+          height: 443px;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      &--right {
+        width: 466px;
+        height: 559px;
+        padding: 30px;
+        &-image {
+          position: absolute;
+          bottom: -15%;
+          right: 0;
+          width: 517px;
+          height: 346px;
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;  
+      }
+    }
+    &__text--bottom {
+        width: 465px;
+    }
+    
+  }
+    
+}
+
+@media screen and (max-width: 800px) {
+  .logistic {
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    &__container {
+     padding: 0 10px;
+    }
+  
+    &__title {
+      margin: 0 auto 10px;
+      width: 160px;
+    }
+  
+    &__text {
+      width: 223px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+  
+    &__cards {
+      position: relative;
+      display: block;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      &__image {
+        display: none;
+      }
+      &--left {
+        position: relative;
+        margin: 0 auto 88px;
+        width: 300px;
+        height: 315px; 
+        padding: 20px;
+        &-image {
+          position: absolute;
+          width: 300px;
+          height: 285px;
+          left: 0;
+          bottom: 0;
+        }
+        &::after {
+          position: absolute;
+          left: 80px;
+          bottom: -95px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+        &::before {
+          position: absolute;
+          left: 50%;
+          bottom: -95px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+      }
+      &--right {
+        position: relative;
+        margin: 0 auto;
+        width: 300px;
+        height: 315px; 
+        padding: 20px;
+        &-image {
+          position: absolute;
+          bottom: -10%;
+          right: 0;
+          width: 300px;
+          height: 210px;
+        }
+        &::before {
+          position: absolute;
+          right: 80px;
+          top: -92px;
+          width: 5px;
+          height: 99px;
+          background-image: url('../../../../public/assets/svg/arrow-logistic.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          content: '';
+        }
+      }
+  
+      &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 19px;
+      }
+    }
+    &__text--bottom {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+  }
+}
