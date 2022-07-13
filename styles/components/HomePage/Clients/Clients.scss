@@ -40,6 +40,9 @@
       
       &--image {
         margin-bottom: 50px;
+        & img {
+          object-fit: cover;
+        }
       }
       &--text {
         font-family: 'RoadRadio';
