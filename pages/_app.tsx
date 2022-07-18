@@ -5,12 +5,23 @@ import Footer from '../src/components/Footer/Footer'
 import Header from '../src/components/Header/Header'
 import '../styles/main.scss'
 import { hotjar } from 'react-hotjar'
+import { useRouter } from 'next/router'
+import * as ga from './lib/ga'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
 
   useEffect(() => {
-    hotjar.initialize(215523203, 1)
-  }, [])
+    const handleRouteChange = (url: any) => {
+      ga.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     
