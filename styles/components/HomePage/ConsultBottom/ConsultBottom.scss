@@ -17,6 +17,8 @@
       height: 50%;
       background: rgba(255, 169, 81, 0.6);
       filter: blur(150px);
+      backface-visibility: hidden;
+      transform: translate3d(0, 0, 0);
     }
   }
   &__text {
@@ -291,6 +293,8 @@
         height: 50%;
         background: rgba(255, 169, 81, 0.6);
         filter: blur(150px);
+        backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
       }
     }
     &__text {

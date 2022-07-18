@@ -139,6 +139,8 @@
     height: 802px;
     background: rgba(255, 169, 81, 0.3);
     filter: blur(275px);
+    backface-visibility: hidden;
+
     &--image {
       position: absolute;
     top: 60%;
@@ -352,6 +354,8 @@
       height: 802px;
       background: rgba(255, 169, 81, 0.3);
       filter: blur(275px);
+      backface-visibility: hidden;
+
       &--image {
         position: absolute;
       top: 60%;
@@ -426,6 +430,8 @@
       height: 80%;
       background: rgba(255, 169, 81, 0.3);
       filter: blur(275px);
+      backface-visibility: hidden;
+
     }
     &::before {
       background-image: url('../../../../public/assets/svg/overlap.svg');

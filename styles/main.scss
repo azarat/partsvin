@@ -51,6 +51,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 1520px;
+  padding: 0px;
 
   
   @media screen and(max-width: 1600px) {
@@ -151,7 +152,6 @@ html {
 img-comparison-slider {
   user-select: none;
 }
-
 
 // Components
 @import './components/Header';
