@@ -2,7 +2,6 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
-
   &::after {
     position: absolute;
     top: 22%;
@@ -163,7 +162,6 @@
 @media screen and (max-width: 1600px) {
   .workProcess {
     padding-bottom: 74px;
-
     &::after {
       position: absolute;
       top: 22%;
@@ -309,7 +307,7 @@
   .workProcess {
     padding-top: 40px;
     padding-bottom: 405px;
-    overflow: hidden;
+    // overflow: hidden;
     &::after {
       position: absolute;
       top: auto;

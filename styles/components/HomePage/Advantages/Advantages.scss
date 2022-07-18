@@ -3,7 +3,6 @@
   background-color: $dark-grey-color;
   padding-top: 60px;
   padding-bottom: 176px;
-  
   &::before {
     position: absolute;
     background-image: url('../../../../public/assets/svg/overlap.svg');
@@ -94,7 +93,7 @@
 
 @media screen and (max-width: 1270px) {
   .advantages {
-    padding-top: 0;
+    padding-top: 80px;
     padding-bottom: 97px;
     
     &::before {
@@ -148,6 +147,7 @@
   .advantages {
     padding-top: 40px;
     padding-bottom: 90px;
+    
     
     &::before {
       position: absolute;

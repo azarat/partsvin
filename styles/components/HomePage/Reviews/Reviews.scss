@@ -2,7 +2,8 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 230px;
-  overflow: hidden;
+  // overflow-x: hidden;
+
   &__title {
     color: $black-color;
     margin-bottom: 50px;
@@ -179,7 +180,7 @@
   .reviews {
     padding-top: 40px;
     padding-bottom: 200px;
-    overflow: hidden;
+    // overflow: hidden;
     &__title {
       margin-bottom: 40px;
     }
@@ -270,7 +271,7 @@
 @media screen and(max-width: 800px) {
   .reviews {
     padding: 40px 60px 100px;
-    overflow: hidden;
+    // overflow: hidden;
     &__title {
       color: $black-color;
       margin-bottom: 40px;
