@@ -6,7 +6,7 @@ import Header from '../src/components/Header/Header'
 import '../styles/main.scss'
 import { hotjar } from 'react-hotjar'
 import { useRouter } from 'next/router'
-import * as ga from './lib/ga'
+import * as ga from '../lib/ga'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
