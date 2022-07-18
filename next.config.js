@@ -15,5 +15,6 @@ module.exports = withReactSvg({
   },
   env: {
     botKey: '5472641997:AAE1HmY_aL5KSQFZQcR6n1z9f0DNtBQMpfY',
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: 'UA-215523203-1'
   },
 })

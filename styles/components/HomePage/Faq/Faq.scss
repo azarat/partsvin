@@ -1,8 +1,213 @@
+.accordion {
+  width: 100%;
+  border: none;
+  &-button:focus {
+    z-index: 3;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+  &-item {
+    & button {
+      &:not(.collapsed) {
+        color: #FFFFFF;
+        background-color: $dark-grey-color;
+        box-shadow: none;
+        &::after {
+          position: absolute;
+          top: 0s;
+          right: 80px;
+          width: 40px;
+          height: 40px;
+          background-image: url('../../../../public/assets/svg/cross.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+          content: '';
+        }
+      }
+      border: none;
+      background-color: $dark-grey-color;
+      padding: 50px 60px;
+      position: relative;
+        font-family: 'RoadRadio';
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+          position: absolute;
+          top: 0s;
+          right: 80px;
+          width: 40px;
+          height: 40px;
+          background-image: url('../../../../public/assets/svg/cross.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+          content: '';
+        }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+  &-body {
+    padding: 0px 60px 44px;
+    background-color: $dark-grey-color;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 38px;
+    color: #FFFFFF;
+  }
+}
+
+@media screen and(max-width: 1600px) { 
+  .accordion {
+    &-item {
+      & button {
+        &:not(.collapsed) {
+          &::after {
+            right: 50px;
+            width: 36px;
+            height: 36px;
+            content: '';
+          }
+        }
+        padding: 40px 50px;
+    
+        font-size: 30px;
+        line-height: 40px;
+  
+          &::after {
+            right: 50px;
+            width: 36px;
+            height: 36px;
+            content: '';
+          }
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+    &-body {
+      padding: 0px 50px 50px;
+      font-size: 21px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .accordion {
+    &-item {
+      & button {
+        &:not(.collapsed) {
+          &::after {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 40px;
+            width: 24px;
+            height: 24px;
+            content: '';
+          }
+        }
+        padding: 20px 30px;
+        font-size: 25px;
+        line-height: 40px;
+  
+          &::after {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 40px;
+            width: 24px;
+            height: 24px;
+            content: '';
+          }
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+    &-body {
+      padding: 0px 30px 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .accordion {
+    &-item {
+      & button {
+        &:not(.collapsed) {
+          padding-left: 20px;
+          &::after {
+            position: absolute;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            background-image: url('../../../../public/assets/svg/cross.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+            content: '';
+          }
+        }
+        padding: 14px 10px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 13px;
+  
+          &::after {
+            position: absolute;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            background-image: url('../../../../public/assets/svg/cross.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+            content: '';
+          }
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 1px;
+      }
+    }
+    &-body {
+      padding: 0px 20px 20px;
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+}
+
 .faq {
   position: relative;
   padding-top: 100px;
   padding-bottom: 50px;
-
+  &__container {
+    padding: 0;
+  }
   &__title {
     color: $black-color;
     margin-bottom: 66px;
@@ -12,6 +217,8 @@
     &-item {
       background-color: $dark-grey-color;
       padding: 50px 60px;
+
+      
       cursor: pointer;
       &:not(:last-of-type) {
         margin-bottom: 10px;
@@ -109,6 +316,8 @@
     }
   }
 }
+
+
 
 @media screen and (max-width: 1270px) {
   .faq {

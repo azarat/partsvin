@@ -41,7 +41,8 @@
       &--image {
         margin-bottom: 50px;
         & img {
-          object-fit: cover;
+          // object-fit: cover;
+          height: 100%;
         }
       }
       &--text {

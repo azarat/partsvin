@@ -99,6 +99,7 @@
           color: $white-color;
           background: linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%);
           box-shadow: 0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+          border: 2px solid transparent;
           cursor: pointer;
           &:hover {
             border: 2px solid $orange-color;
@@ -117,6 +118,7 @@
           text-transform: uppercase;
           background: linear-gradient(94.92deg, #EC9236 -7.37%, #FFA447 108.18%);
           box-shadow: 0px 0px 30px rgba(239, 151, 60, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+          border: 2px solid transparent;
           cursor: pointer;
           &:hover {
             border: 2px solid $orange-color;

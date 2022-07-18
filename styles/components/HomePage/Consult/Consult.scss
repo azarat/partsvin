@@ -170,7 +170,7 @@
       margin-bottom: 30px;
     }
     &__pre-title {
-      font-family: 'Roboto';
+      font-family: 'RoadRadio';
       font-weight: 400;
       font-size: 40px;
       line-height: 40px;
@@ -195,10 +195,10 @@
 @media screen and (max-width: 1600px) {
   .consult {
     &__container {
-      padding: 50;
+      padding: 50px 50px 70px;
     }
     &__text {
-      width: 650px;
+      width: 651px;
     }
     &__title {
       text-align: start;

@@ -2,6 +2,7 @@
 @import './variables/variables';
 @import '../public/fonts/Roboto/stylesheet.css';
 @import '../public/fonts/RoadRadio/stylesheet.css';
+@import "~bootstrap/scss/bootstrap";
 
 
 * {
@@ -12,7 +13,8 @@
 
 html,
 body {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
+  overflow-x: hidden
 }
 
 ul {
@@ -144,6 +146,10 @@ html {
 .orange-text {
   color: $orange-color;
   font-weight: 700;
+}
+
+img-comparison-slider {
+  user-select: none;
 }
 
 
