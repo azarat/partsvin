@@ -173,6 +173,7 @@
       margin: 0 auto 50px;
     }
     &__title {
+      font-family: 'RoadRadio';
       font-weight: 400;
       font-size: 95.625px;
       line-height: 96px;
@@ -181,7 +182,8 @@
       color: $black-color;
       margin-bottom: 30px;
     }
-    &__pre-title {
+    &__pre-title {      
+      font-family: 'RoadRadio';
       font-weight: 400;
       font-size: 40px;
       line-height: 40px;
@@ -191,6 +193,7 @@
       margin-bottom: 70px;
     }
     &__text {
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 35px;
       line-height: 52px;
