@@ -146,6 +146,10 @@ html {
   font-weight: 700;
 }
 
+img-comparison-slider {
+  user-select: none;
+}
+
 
 // Components
 @import './components/Header';
