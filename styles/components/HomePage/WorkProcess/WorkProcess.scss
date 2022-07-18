@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
+  scroll-margin-top: 100px;
 
   &::after {
     position: absolute;
@@ -163,7 +164,7 @@
 @media screen and (max-width: 1600px) {
   .workProcess {
     padding-bottom: 74px;
-
+    scroll-margin-top: 80px;
     &::after {
       position: absolute;
       top: 22%;
@@ -307,9 +308,10 @@
 
 @media screen and (max-width: 1270px) {
   .workProcess {
+    scroll-margin-top: 114px;
     padding-top: 40px;
     padding-bottom: 405px;
-    overflow: hidden;
+    // overflow: hidden;
     &::after {
       position: absolute;
       top: auto;
@@ -471,6 +473,7 @@
 @media screen and (max-width: 800px) {
   .workProcess {
     position: relative;
+    scroll-margin-top: 100px;
     padding-top: 40px;
     padding-bottom: 32px;
 

@@ -3,7 +3,7 @@
   background-color: $dark-grey-color;
   padding-top: 60px;
   padding-bottom: 176px;
-  
+  scroll-margin-top: 100px;
   &::before {
     position: absolute;
     background-image: url('../../../../public/assets/svg/overlap.svg');
@@ -51,6 +51,7 @@
 
 @media screen and (max-width: 1600px) {
   .advantages {
+    scroll-margin-top: 80px;
     padding-top: 0;
     padding-bottom: 153px;
     
@@ -94,6 +95,7 @@
 
 @media screen and (max-width: 1270px) {
   .advantages {
+    scroll-margin-top: 114px;
     padding-top: 0;
     padding-bottom: 97px;
     
@@ -148,6 +150,7 @@
   .advantages {
     padding-top: 40px;
     padding-bottom: 90px;
+    scroll-margin-top: 100px;
     
     &::before {
       position: absolute;
