@@ -3,7 +3,6 @@
   background-color: $dark-grey-color;
   padding-top: 60px;
   padding-bottom: 50px;
-  scroll-margin-top: 100px;
 
   &__title {
     margin-bottom: 20px;
@@ -81,7 +80,6 @@
 
 @media screen and (max-width: 1600px) {
   .logistic {
-    scroll-margin-top: 80px;
     &__text {
       width: 347px;
     }
@@ -131,7 +129,6 @@
 
 @media screen and (max-width: 1270px)  {
   .logistic {
-    scroll-margin-top: 114px;
     padding-top: 40px;
     padding-bottom: 40px;
   
@@ -201,7 +198,6 @@
     // overflow: hidden;
     padding-top: 30px;
     padding-bottom: 10px;
-    scroll-margin-top: 100px;
 
     &__container {
      padding: 0 10px;

@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Promo = () => {
 
   return (
-    <section className='promo'>
+    <section className='promo' id='promo'>
       <div className="container promo__container--desc">
         <div className="promo__bg"></div>
         <h1 className="promo__title">Все, що потрібно для вашого автомобіля</h1>

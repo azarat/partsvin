@@ -3,7 +3,6 @@
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: $dark-grey-color;
-  scroll-margin-top: 100px;
 
   &__title {
     width: 736px;
@@ -51,7 +50,6 @@
 
 @media screen and (max-width: 1600px) {
   .storage {
-    scroll-margin-top: 80px;
     padding-bottom: 60px;
     &__title {
       width: 679px;
@@ -82,7 +80,6 @@
 
 @media screen and (max-width: 1270px) {
   .storage {
-    scroll-margin-top: 114px;
     padding-top: 40px;
     padding-bottom: 40px;
     &__title {
@@ -125,7 +122,6 @@
 @media screen and (max-width: 800px) {
   .storage {
     position: relative;
-    scroll-margin-top: 100px;
     padding: 30px 10px;
     background-color: $dark-grey-color;
     &__title {
