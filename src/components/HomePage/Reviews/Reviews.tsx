@@ -76,10 +76,11 @@ const Reviews = () => {
     if (slider.current === null)  
       return 0
 
+
     if (!scrollLock) {
-      if (e.deltaX > 0) {
+      if (e.nativeEvent.wheelDelta > 0) {
         slider.current.slickNext()
-      } else if (e.deltaX < 0) {
+      } else if (e.nativeEvent.wheelDelta < 0) {
         slider.current.slickPrev()
       }
     }
