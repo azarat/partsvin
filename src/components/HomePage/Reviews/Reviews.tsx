@@ -1,10 +1,11 @@
+import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react'
 import Image from 'next/image'
-import  ClientsReviews  from '../../../constants/reviews'
+import ClientsReviews from '../../../constants/reviews'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReviewSVG from '../../../assets/svg/review.svg'
-
+import debounce from 'lodash.debounce';
 
 const Reviews = () => {
   const settings = {
@@ -62,12 +63,37 @@ const Reviews = () => {
     );
   }
 
+  const [scrollLock, setScrollLock] = useState(false)
+
+  const slider = useRef<any>(null);
+
+  const debouncedChangeHandler = useMemo(()=>
+    debounce(()=>{
+      setScrollLock(false)
+    }, 100), []);
+
+  const scroll = (e: any) => {    
+    if (slider.current === null)  
+      return 0
+
+    if (!scrollLock) {
+      if (e.deltaX > 0) {
+        slider.current.slickNext()
+      } else if (e.deltaX < 0) {
+        slider.current.slickPrev()
+      }
+    }
+
+    setScrollLock(true)
+
+    debouncedChangeHandler()
+  }
 
   return (
     <section className='reviews' id='reviews'>
-      <div className="container reviews__container">
+      <div className="container reviews__container" onWheel={scroll}>
         <h2 className='title reviews__title'>Відгуки</h2>
-        <Slider {...settings}>
+        <Slider {...settings} ref={slider}>
         {ClientsReviews.map(({ id, name, text, image }) => (
             <div key={id} className="reviews__card">
               <div className="reviews__card-image">
