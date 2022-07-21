@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Modal from '../Modal/Modal'
 import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
 import InputMask from 'react-input-mask'
+import { useRouter } from 'next/router'
 
 const ConsultBottom = () => {
   const [errors, setErrors] = useState<string[]>([])
@@ -13,11 +14,15 @@ const ConsultBottom = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const router = useRouter()
+
   const openModal = () => {
+    router.push('/#thankyou')
     setShowModal(prevState => !prevState);
   };
   const closeModal = () => {
     setShowModal(prevState => !prevState);
+    router.push('/')
   };
 
   const validate = (): string[] => {

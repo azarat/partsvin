@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Modal from '../Modal/Modal'
 import CheckMarkSVG from '../../../assets/svg/modalCheckMark.svg'
 import InputMask from 'react-input-mask'
+import { useRouter } from 'next/router'
 
 
 const Consult = () => {
@@ -10,15 +11,20 @@ const Consult = () => {
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [connectType, setConnectType] = useState<string>('tel')
+  const [showModal, setShowModal] = useState(false);
+  
+  const router = useRouter()
+
   const numberRegEpx = /^\+380\(\d{2}\) \d{3}-\d{2}-\d{2}$/
 
-  const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
+    router.push('/#thankyou')
     setShowModal(prevState => !prevState);
   };
   const closeModal = () => {
     setShowModal(prevState => !prevState);
+    router.push('/')
   };
 
   const validate = (): string[] => {
