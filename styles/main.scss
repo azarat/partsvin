@@ -50,18 +50,18 @@ html {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 1520px;
+  max-width: 1520px;
   padding: 0px;
 
   
   @media screen and(max-width: 1600px) {
-    width: 1200px;
+    max-width: 1200px;
   }
   @media screen and(max-width: 1270px) {
-    width: 774px;
+    max-width: 774px;
   }
   @media screen and(max-width: 800px) {
-    width: 100%;
+    max-width: 100%;
   }
   
 }
