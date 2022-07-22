@@ -9,7 +9,7 @@
   z-index: 999;
   &.scrolled {
     background: $black-color;
-    height: 100px;
+    height: 90px;
     .child_menu {
       &::before {
         border-color: $black-color transparent transparent transparent;
