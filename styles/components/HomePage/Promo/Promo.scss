@@ -67,7 +67,7 @@
       height: 99px;
       background: linear-gradient(270deg, #584026 0%, rgba(42, 34, 27, 0) 100%);
       backdrop-filter: blur(30px);
-
+      z-index: 1;
       &--left {
           position: absolute;
           top: 0;

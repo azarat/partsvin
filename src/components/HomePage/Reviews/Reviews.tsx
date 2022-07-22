@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react'
-import Image from 'next/image'
+import React, { useRef, useState, useMemo } from 'react'
 import ClientsReviews from '../../../constants/reviews'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReviewSVG from '../../../assets/svg/review.svg'
 import debounce from 'lodash.debounce';
+import Review from './Review';
+
 
 const Reviews = () => {
   const settings = {
@@ -78,9 +78,9 @@ const Reviews = () => {
 
 
     if (!scrollLock) {
-      if (e.nativeEvent.wheelDelta > 0) {
+      if (e.nativeEvent.deltaX > 0) {
         slider.current.slickNext()
-      } else if (e.nativeEvent.wheelDelta < 0) {
+      } else if (e.nativeEvent.deltaX < 0) {
         slider.current.slickPrev()
       }
     }
@@ -95,21 +95,8 @@ const Reviews = () => {
       <div className="container reviews__container" onWheel={scroll}>
         <h2 className='title reviews__title'>Відгуки</h2>
         <Slider {...settings} ref={slider}>
-        {ClientsReviews.map(({ id, name, text, image }) => (
-            <div key={id} className="reviews__card">
-              <div className="reviews__card-image">
-                <Image
-                src={image}
-                layout="fill"
-                objectFit="cover"
-                alt='car'
-                />
-              </div>
-              <div className="reviews__card-wrapper">
-                <p className='reviews__card-name'><ReviewSVG/> {name}</p>
-                <p className='reviews__card-text'>{text}</p>
-              </div>
-            </div>))}
+          {ClientsReviews.map(({ id, name, text, image }) => <Review key={id} id={id} name={name} text={text} image={image}/>
+            )}
         </Slider>
 
       </div>
