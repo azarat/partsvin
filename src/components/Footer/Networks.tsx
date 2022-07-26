@@ -1,7 +1,7 @@
 import FacebookSVG from '../../assets/svg/facebook.svg'
 import InstagramSVG from '../../assets/svg/instagram.svg'
 import PhoneSVG from '../../assets/svg/phone.svg'
-import ViberSVG from '../../assets/svg/viber.svg'
+import TelegramSvg from '../../assets/svg/telegram.svg'
 
 
 const Networks = () => {
@@ -13,8 +13,8 @@ const Networks = () => {
             </a>
           </li>
           <li className="footer__networks__item">
-            <a className='footer__networks__link' target="_blank" href="https://skobelkin.ru/viber/0687454269" rel="noreferrer">
-              <ViberSVG />
+            <a className='footer__networks__link' target="_blank" href="https://t.me/Denis_CFW" rel="noreferrer">
+              <TelegramSvg />
             </a>
           </li>
           <li className="footer__networks__item">
@@ -23,7 +23,7 @@ const Networks = () => {
             </a>
           </li>
           <li className="footer__networks__item">
-            <a className='footer__networks__link' href='tel:+380687454269' rel="noreferrer">
+            <a className='footer__networks__link' href='tel:+380681748181' rel="noreferrer">
               <PhoneSVG />
             </a>
           </li>
